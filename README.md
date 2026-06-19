@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# sawahlunto.id
 
-## Getting Started
+Website kompetisi **Nusantara Digital City** (Media Cloud Indonesia x PANDI) — portal digital kota Sawahlunto, Sumatera Barat, untuk wisatawan lokal & mancanegara.
 
-First, run the development server:
+Sawahlunto adalah kota bekas tambang batu bara kolonial yang kini menjadi Situs Warisan Dunia UNESCO (Ombilin Coal Mining Heritage, 2019). Tagline situs: *"Dari kota tambang, menuju kota wisata digital."*
+
+## Tech stack
+
+- **Next.js** (App Router) + TypeScript, static export (`output: 'export'`) — 100% frontend, tanpa backend/API
+- **Tailwind CSS** dengan token warna custom (terracotta, krem, charcoal, aksen teal)
+- **i18n**: locale routing `app/[locale]/...` untuk Indonesia (`id`) & English (`en`)
+- **PWA**: manifest + service worker custom (mode offline, cache-first)
+- **Deploy**: Vercel, domain custom .id
+
+## Menjalankan secara lokal
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build untuk production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm build
+```
 
-## Learn More
+Output statis akan ada di folder `out/`, siap di-deploy ke Vercel atau hosting statis lain.
 
-To learn more about Next.js, take a look at the following resources:
+## Struktur halaman
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Route | Keterangan |
+|---|---|
+| `/` | Beranda |
+| `/sejarah`, `/sejarah/[slug]` | Sejarah — index timeline + detail per peristiwa |
+| `/budaya` | Budaya & tradisi |
+| `/kuliner` | Kuliner khas |
+| `/wisata`, `/wisata/[slug]` | Destinasi wisata — index + detail per destinasi |
+| `/inovasi` | Inovasi & teknologi |
+| `/peta` | Peta kota (ilustrasi custom, berfungsi offline) |
+| `/sumber` | Sumber & referensi konten |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Alur baca yang disarankan: Beranda → Sejarah → Budaya → Kuliner → Wisata → Inovasi → Peta.
 
-## Deploy on Vercel
+## Struktur folder
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/[locale]/      halaman per route (lihat tabel di atas)
+data/               konten dwibahasa per section (*.ts)
+components/         komponen bersama (Navbar, Footer, Timeline, dll.)
+public/             aset statis, manifest PWA
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Dokumentasi tambahan
+
+- [`AGENTS.md`](./AGENTS.md) — konteks project untuk AI coding agent (Claude Code)
+- [`TODO.md`](./TODO.md) — linimasa sprint pengembangan
+- [`DEV-CHECKLIST.md`](./DEV-CHECKLIST.md) — checklist teknis tiap halaman/komponen
+- [`REFERENSI.md`](./REFERENSI.md) — sumber & referensi riset konten
+
+## Kompetisi
+
+- Penyelenggara: Media Cloud Indonesia x PANDI
+- Tema: Nusantara Digital City
+- Deadline pengumpulan: 20 Juli 2026
