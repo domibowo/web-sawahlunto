@@ -1,10 +1,12 @@
+import Link from "next/link";
 import type { Dictionary } from "@/dictionaries/id";
 
 interface FooterProps {
+  locale: string;
   dict: Dictionary;
 }
 
-export default function Footer({ dict }: FooterProps) {
+export default function Footer({ locale, dict }: FooterProps) {
   const { footer } = dict;
 
   return (
@@ -13,6 +15,13 @@ export default function Footer({ dict }: FooterProps) {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-center sm:text-left">{footer.credit}</p>
           <div className="flex items-center gap-4">
+            <Link
+              href={`/${locale}/sumber`}
+              className="text-sm text-cream/50 hover:text-teal transition-colors"
+            >
+              {footer.sumberLink}
+            </Link>
+            <span className="text-cream/30">·</span>
             <span className="text-sm">{footer.social}:</span>
             {/* Social icon placeholders */}
             <a href="#" aria-label="Instagram" className="hover:text-teal transition-colors">

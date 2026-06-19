@@ -55,9 +55,17 @@ const id = {
     nextEvent: "Peristiwa selanjutnya →",
     photoCredit: "Sumber: [diisi nanti]",
   },
+  budaya: {
+    heroTitle: "Budaya & Tradisi Sawahlunto",
+    intro:
+      "Dari rahim penderitaan para pekerja tambang lintas etnis, Sawahlunto mewarisi kekayaan budaya yang unik dan tak tertandingi — bahasa, tenun, dan perayaan yang menjadi penanda identitas kota.",
+    nextKuliner: "Lanjut ke Kuliner Khas →",
+    photoCredit: "Sumber: [diisi nanti]",
+  },
   footer: {
     credit: "Dibuat oleh Tim Nusantara Digital City · 2024",
     social: "Media sosial",
+    sumberLink: "Sumber & referensi",
   },
   lang: {
     toggle: "EN",

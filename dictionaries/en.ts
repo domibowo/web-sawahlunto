@@ -57,9 +57,17 @@ const en: Dictionary = {
     nextEvent: "Next event →",
     photoCredit: "Source: [to be filled]",
   },
+  budaya: {
+    heroTitle: "Culture & Traditions of Sawahlunto",
+    intro:
+      "From the suffering of multi-ethnic mine workers, Sawahlunto inherited a unique and unmatched cultural richness — language, weaving, and celebrations that mark the city's identity.",
+    nextKuliner: "Continue to Local Cuisine →",
+    photoCredit: "Source: [to be filled]",
+  },
   footer: {
     credit: "Created by Team Nusantara Digital City · 2024",
     social: "Social media",
+    sumberLink: "Sources & references",
   },
   lang: {
     toggle: "ID",

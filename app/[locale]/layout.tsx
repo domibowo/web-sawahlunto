@@ -45,7 +45,7 @@ export default async function LocaleLayout({
       <body className="min-h-full flex flex-col">
         <Navbar locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>
-        <Footer dict={dict} />
+        <Footer locale={locale} dict={dict} />
       </body>
     </html>
   );
