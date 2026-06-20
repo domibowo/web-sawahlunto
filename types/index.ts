@@ -1,5 +1,11 @@
 export type Bilingual = { id: string; en: string };
 
+export type Reference = {
+  nomor: number;
+  sumber: string;
+  url?: string;
+};
+
 export type TimelineEvent = {
   slug: string;
   tahun: string;
@@ -7,6 +13,7 @@ export type TimelineEvent = {
   ringkasan: Bilingual;
   detail: Bilingual;
   gambar: string; // path ke public/, kosong = placeholder
+  referensi: Reference[];
 };
 
 export type WisataItem = {

@@ -13,10 +13,22 @@ export const sejarahData: TimelineEvent[] = [
       en: "Dutch engineer Willem Hendrik de Greve discovered high-quality coal deposits in the Ombilin valley, forever changing this small village.",
     },
     detail: {
-      id: "Pada 1867, geolog Belanda Willem Hendrik de Greve menemukan cadangan batu bara berkualitas tinggi di kawasan Ombilin saat melakukan survei di pedalaman Sumatera Barat. Penelitiannya kemudian dilanjutkan oleh Jacobus Cluysenaer dan Daniel Veth, setelah de Greve meninggal akibat kecelakaan saat eksplorasi lanjutan di Sungai Indragiri pada 1872. Penemuan inilah yang menjadi titik awal seluruh sejarah pertambangan Sawahlunto.",
-      en: "In 1867, Dutch geologist Willem Hendrik de Greve discovered high-quality coal reserves in the Ombilin area while conducting surveys in the interior of West Sumatra. His research was later continued by Jacobus Cluysenaer and Daniel Veth, after de Greve died in an accident during further exploration on the Indragiri River in 1872. This discovery marked the beginning of Sawahlunto's entire mining history.",
+      id: "Tahun 1867, geolog Belanda Willem Hendrik de Greve menemukan cadangan batu bara berkualitas tinggi di kawasan Ombilin saat menyurvei pedalaman Sumatera Barat.[1] Sayangnya, ia tidak sempat melihat hasil temuannya berkembang — de Greve meninggal karena kecelakaan saat melanjutkan eksplorasi di Sungai Indragiri pada 1872.[2] Penelitiannya kemudian diteruskan oleh dua insinyur lain, Jacobus Cluysenaer dan Daniel Veth. Dari sinilah seluruh sejarah pertambangan Sawahlunto dimulai.[2]",
+      en: "In 1867, Dutch geologist Willem Hendrik de Greve discovered high-quality coal reserves in the Ombilin area while surveying the interior of West Sumatra.[1] Sadly, he never saw his discovery develop — de Greve died in an accident while continuing exploration on the Indragiri River in 1872.[2] His research was then continued by two other engineers, Jacobus Cluysenaer and Daniel Veth. This is where Sawahlunto's entire mining history began.[2]",
     },
     gambar: "",
+    referensi: [
+      {
+        nomor: 1,
+        sumber: "Kompas.com — Sejarah Sawahlunto",
+        url: "https://medan.kompas.com/read/2022/01/15/154345278/sejarah-sawahlunto-kota-pemilik-tambang-batu-bara-pertama-di-indonesia-dan",
+      },
+      {
+        nomor: 2,
+        sumber: "Indonesia.go.id — Jejak Sejarah Tambang Batu Bara Ombilin",
+        url: "https://indonesia.go.id/ragam/pariwisata/pariwisata/jejak-sejarah-tambang-batu-bara-ombilin-menjadi-situs-warisan-dunia",
+      },
+    ],
   },
   {
     slug: "tambang-dibuka",
@@ -30,10 +42,17 @@ export const sejarahData: TimelineEvent[] = [
       en: "After approval by the Dutch parliament, coal mining officially began at Ombilin with massive investment from the colonial government.",
     },
     detail: {
-      id: "Parlemen Belanda mengesahkan undang-undang pertambangan batu bara Ombilin pada akhir November 1891. Pemerintah kolonial menginvestasikan sekitar 5,5 juta gulden untuk membangun permukiman dan fasilitas penambangan, mengubah lembah sunyi ini menjadi kawasan industri yang sibuk.",
-      en: "The Dutch parliament passed the Ombilin coal mining law in late November 1891. The colonial government invested approximately 5.5 million guilders to build settlements and mining facilities, transforming this quiet valley into a bustling industrial area.",
+      id: "Setelah proses yang panjang, parlemen Belanda akhirnya mengesahkan undang-undang pertambangan batu bara Ombilin pada akhir November 1891.[1] Pemerintah kolonial lalu menanamkan investasi besar — sekitar 5,5 juta gulden — untuk membangun permukiman dan fasilitas penambangan. Lembah yang dulunya sunyi ini berubah jadi kawasan industri yang ramai.[1]",
+      en: "After a lengthy process, the Dutch parliament finally passed the Ombilin coal mining law in late November 1891.[1] The colonial government then invested heavily — around 5.5 million guilders — to build settlements and mining facilities. This once-quiet valley transformed into a bustling industrial zone.[1]",
     },
     gambar: "",
+    referensi: [
+      {
+        nomor: 1,
+        sumber: "Indonesia.go.id",
+        url: "https://indonesia.go.id/ragam/pariwisata/pariwisata/jejak-sejarah-tambang-batu-bara-ombilin-menjadi-situs-warisan-dunia",
+      },
+    ],
   },
   {
     slug: "jalur-kereta",
@@ -47,10 +66,22 @@ export const sejarahData: TimelineEvent[] = [
       en: "A railway was built to transport coal from Sawahlunto to the port of Teluk Bayur in Padang.",
     },
     detail: {
-      id: "Demi mempermudah distribusi batu bara hingga ke Eropa, Belanda membangun jalur kereta api yang menghubungkan Sawahlunto dengan Pelabuhan Teluk Bayur. Stasiun kereta dengan fasilitas lengkap dibangun pada 1918, kini menjadi Museum Kereta Api Sawahlunto.",
-      en: "To facilitate coal distribution all the way to Europe, the Dutch built a railway connecting Sawahlunto to the Port of Teluk Bayur. A fully-equipped train station was built in 1918, now serving as the Sawahlunto Railway Museum.",
+      id: "Medan pegunungan yang terjal tidak menghalangi Belanda mengangkut hasil tambangnya. Mereka membangun jalur kereta rel gigi (rack railway) sepanjang 155 kilometer yang menghubungkan Sawahlunto dengan pelabuhan Emmahaven, lengkap dengan jembatan dan terowongan.[1] Pelabuhan itu kini dikenal sebagai Teluk Bayur.[2] Stasiun kereta dengan fasilitas lengkap dibangun pada 1918, dan kini bangunan itu menjadi Museum Kereta Api Sawahlunto.[2]",
+      en: "The rugged mountain terrain did not stop the Dutch from transporting their mining output. They built a 155-kilometer rack railway connecting Sawahlunto to Emmahaven port, complete with bridges and tunnels.[1] That port is now known as Teluk Bayur.[2] A fully-equipped train station was built in 1918, and that building is now the Sawahlunto Railway Museum.[2]",
     },
     gambar: "",
+    referensi: [
+      {
+        nomor: 1,
+        sumber: "UNESCO World Heritage Centre",
+        url: "https://whc.unesco.org/en/list/1610/",
+      },
+      {
+        nomor: 2,
+        sumber: "Indonesia.go.id",
+        url: "https://indonesia.go.id/ragam/pariwisata/pariwisata/jejak-sejarah-tambang-batu-bara-ombilin-menjadi-situs-warisan-dunia",
+      },
+    ],
   },
   {
     slug: "orang-rantai",
@@ -64,10 +95,27 @@ export const sejarahData: TimelineEvent[] = [
       en: "Thousands of workers, many of them prisoners, were forced to work with their feet chained in inhumane conditions.",
     },
     detail: {
-      id: "Di balik kemajuan industri tambang, tersimpan sejarah kelam: ribuan pekerja yang dikenal sebagai 'orang rantai' dipaksa bekerja dengan kaki dirantai agar tidak melarikan diri. Jejaknya masih bisa disaksikan di terowongan Lubang Mbah Soero, yang namanya diambil dari mandor asal Jawa bernama Soerono — dikenal lewat dua versi cerita berbeda, sebagian menyebutnya pekerja keras yang disegani, sebagian lain mengingatnya sebagai pengawas yang kejam.",
-      en: "Behind the progress of the mining industry lies a dark history: thousands of workers known as 'orang rantai' (chained people) were forced to work with their feet shackled to prevent escape. Their traces can still be seen in the Lubang Mbah Soero tunnel, named after a Javanese foreman named Soerono — remembered through two different stories, some calling him a hardworking and respected worker, others recalling him as a cruel overseer.",
+      id: "Tenaga kerja tambang Ombilin datang dari latar yang beragam: warga Minangkabau setempat, pekerja kontrak dari Jawa dan Tiongkok, serta tahanan dari berbagai wilayah jajahan Belanda.[1] Kelompok tahanan inilah yang dipekerjakan secara paksa dengan kaki dirantai — mereka yang kemudian dikenal sebagai 'orang rantai'.[2] Jejak mereka masih bisa disaksikan hari ini di terowongan Lubang Mbah Soero, yang namanya diambil dari seorang mandor asal Jawa bernama Soerono. Dari percampuran berbagai latar belakang pekerja inilah lahir bahasa kreol unik bernama Tansi (disebut UNESCO sebagai 'Tangsi'), yang kini terus dijaga oleh generasi muda Sawahlunto.[3]",
+      en: "The Ombilin mine workforce came from diverse backgrounds: local Minangkabau residents, contract workers from Java and China, and prisoners from various Dutch colonial territories.[1] It was this group of prisoners who were forced to work with their feet shackled — they became known as 'orang rantai' (chained people).[2] Their traces can still be seen today in the Lubang Mbah Soero tunnel, named after a Javanese foreman named Soerono. From this mixing of backgrounds was born a unique creole language called Tansi (referred to by UNESCO as 'Tangsi'), still preserved by Sawahlunto's younger generations today.[3]",
     },
     gambar: "",
+    referensi: [
+      {
+        nomor: 1,
+        sumber: "UNESCO World Heritage Centre",
+        url: "https://whc.unesco.org/en/list/1610/",
+      },
+      {
+        nomor: 2,
+        sumber: "Dokumen Nominasi UNESCO",
+        url: "https://whc.unesco.org/document/176199",
+      },
+      {
+        nomor: 3,
+        sumber: "UNESCO Jakarta",
+        url: "https://whc.unesco.org/en/news/2662",
+      },
+    ],
   },
   {
     slug: "puncak-kejayaan",
@@ -81,10 +129,17 @@ export const sejarahData: TimelineEvent[] = [
       en: "Sawahlunto's coal production reached its peak, at one point supplying 90% of the Dutch East Indies' energy needs.",
     },
     detail: {
-      id: "Pada awal abad ke-20, tambang Ombilin mencapai masa kejayaannya. Produksinya memenuhi hingga 90 persen kebutuhan energi Hindia Belanda, dengan ribuan pekerja dan hampir seratus staf Belanda mengelola operasionalnya. Sawahlunto tumbuh menjadi kota besar di pantai barat Sumatera, hanya kalah dari Padang.",
-      en: "In the early 20th century, the Ombilin mine reached its golden age. Its production fulfilled up to 90 percent of the Dutch East Indies' energy needs, with thousands of workers and nearly a hundred Dutch staff managing operations. Sawahlunto grew into a major city on the west coast of Sumatra, second only to Padang.",
+      id: "Awal abad ke-20 jadi masa kejayaan tambang Ombilin. Produksinya bahkan memenuhi hingga 90 persen kebutuhan energi di seluruh Hindia Belanda, dikerjakan oleh ribuan pekerja dan hampir seratus staf Belanda.[1] Sawahlunto pun tumbuh jadi kota besar di pantai barat Sumatera — hanya kalah ukuran dari Padang.[1]",
+      en: "The early 20th century marked the golden age of the Ombilin mine. Its production supplied up to 90 percent of the energy needs across the Dutch East Indies, managed by thousands of workers and nearly a hundred Dutch staff.[1] Sawahlunto grew into a major city on the west coast of Sumatra — second only to Padang in size.[1]",
     },
     gambar: "",
+    referensi: [
+      {
+        nomor: 1,
+        sumber: "1001indonesia.net",
+        url: "https://1001indonesia.net/tambang-batubara-ombilin-sawahlunto/",
+      },
+    ],
   },
   {
     slug: "kota-nyaris-mati",
@@ -98,10 +153,22 @@ export const sejarahData: TimelineEvent[] = [
       en: "Coal reserves dwindled, production halted, and the city's population shrank drastically.",
     },
     detail: {
-      id: "Hampir seabad setelah masa kejayaannya, cadangan batu bara Ombilin menipis dan biaya operasional meningkat. Pada awal 2000-an, aktivitas penambangan nyaris terhenti total. Banyak penduduk kehilangan pekerjaan dan pindah ke kota lain, membuat Sawahlunto berada di ambang menjadi kota mati.",
-      en: "Nearly a century after its golden age, Ombilin's coal reserves dwindled and operating costs rose. By the early 2000s, mining activity had almost completely stopped. Many residents lost their jobs and moved to other cities, bringing Sawahlunto to the brink of becoming a ghost town.",
+      id: "Setelah kemerdekaan, tambang Ombilin dikelola pemerintah Indonesia hingga operasi skala besarnya berakhir pada 2002, seiring menipisnya cadangan batu bara dan naiknya biaya operasional.[1] Banyak penduduk kehilangan pekerjaan dan pindah ke kota lain. Sawahlunto pun berada di ambang menjadi kota mati.[2]",
+      en: "After independence, the Ombilin mine was managed by the Indonesian government until its large-scale operations ended in 2002, as coal reserves thinned and operating costs rose.[1] Many residents lost their jobs and moved to other cities. Sawahlunto was on the verge of becoming a ghost town.[2]",
     },
     gambar: "",
+    referensi: [
+      {
+        nomor: 1,
+        sumber: "Dokumen Nominasi UNESCO",
+        url: "https://whc.unesco.org/document/176199",
+      },
+      {
+        nomor: 2,
+        sumber: "Indonesiana.id",
+        url: "https://www.indonesiana.id/read/184576/sawahlunto-dari-kota-tambang-ke-warisan-dunia",
+      },
+    ],
   },
   {
     slug: "warisan-dunia-unesco",
@@ -115,10 +182,17 @@ export const sejarahData: TimelineEvent[] = [
       en: "After years of conservation efforts, the Ombilin Coal Mine was designated by UNESCO as Indonesia's fifth World Heritage Site.",
     },
     detail: {
-      id: "Alih-alih menyerah pada nasib sebagai kota mati, Sawahlunto memilih merawat warisan tambangnya. Usaha pelestarian yang dirintis sejak 2012 dan masuk Daftar Tentatif UNESCO pada 2015 membuahkan hasil pada 6 Juli 2019, ketika Tambang Batu Bara Ombilin resmi ditetapkan sebagai Situs Warisan Dunia UNESCO kelima milik Indonesia.",
-      en: "Instead of surrendering to the fate of a ghost town, Sawahlunto chose to preserve its mining heritage. Conservation efforts initiated since 2012 and added to the UNESCO Tentative List in 2015 bore fruit on July 6, 2019, when the Ombilin Coal Mine was officially designated as Indonesia's fifth UNESCO World Heritage Site.",
+      id: "Alih-alih menyerah, Sawahlunto memilih merawat warisan tambangnya. Usaha itu membuahkan hasil pada 6 Juli 2019, ketika UNESCO menetapkan Tambang Batu Bara Ombilin sebagai Warisan Dunia kelima milik Indonesia — mencakup 12 komponen situs di tiga wilayah: kawasan tambang dan kota tambang Sawahlunto, jalur kereta sepanjang 155 km, serta pelabuhan Emmahaven.[1] Pengakuan ini diberikan atas dua alasan: sebagai bukti pertukaran teknologi pertambangan antara Eropa dan wilayah jajahannya, dan sebagai contoh luar biasa perpaduan teknologi dengan kearifan lokal dalam sejarah manusia.[1]",
+      en: "Instead of giving up, Sawahlunto chose to preserve its mining heritage. Those efforts bore fruit on July 6, 2019, when UNESCO designated the Ombilin Coal Mine as Indonesia's fifth World Heritage Site — encompassing 12 site components across three areas: the Sawahlunto mining area and mining town, the 155 km railway, and Emmahaven port.[1] This recognition was granted for two reasons: as evidence of the exchange of mining technology between Europe and its colonies, and as an outstanding example of the integration of technology with local wisdom in human history.[1]",
     },
     gambar: "",
+    referensi: [
+      {
+        nomor: 1,
+        sumber: "UNESCO World Heritage Centre",
+        url: "https://whc.unesco.org/en/list/1610/",
+      },
+    ],
   },
 ];
 

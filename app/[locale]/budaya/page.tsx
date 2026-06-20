@@ -1,8 +1,10 @@
 import { getDictionary } from "@/dictionaries";
-import { budayaData } from "@/data/budaya";
+import { budayaData, budayaReferensi } from "@/data/budaya";
 import HeroBanner from "@/components/HeroBanner";
 import CTAButton from "@/components/CTAButton";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
+import FootnoteText from "@/components/FootnoteText";
+import ReferenceList from "@/components/ReferenceList";
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];
@@ -52,12 +54,15 @@ export default async function BudayaPage({
                   {section.judul[lang]}
                 </h2>
                 <p className="text-charcoal-light text-base sm:text-lg leading-relaxed">
-                  {section.isi[lang]}
+                  <FootnoteText text={section.isi[lang]} scope="budaya" />
                 </p>
               </div>
             </section>
           );
         })}
+
+        {/* Referensi — satu kali di bagian bawah */}
+        <ReferenceList items={budayaReferensi} scope="budaya" />
       </div>
 
       {/* CTA */}
