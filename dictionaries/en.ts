@@ -29,7 +29,7 @@ const en: Dictionary = {
         title: "Local Cuisine",
         desc: "Authentic flavors found nowhere else",
       },
-      destinasi: {
+      wisata: {
         title: "Tourist Destinations",
         desc: "Historic sites, nature, and museums worth visiting",
       },

@@ -27,7 +27,7 @@ const id = {
         title: "Kuliner Khas",
         desc: "Cita rasa autentik yang tak ditemukan di tempat lain",
       },
-      destinasi: {
+      wisata: {
         title: "Destinasi Wisata",
         desc: "Lokasi bersejarah, alam, dan museum yang wajib dikunjungi",
       },
