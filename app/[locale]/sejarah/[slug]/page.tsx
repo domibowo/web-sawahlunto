@@ -4,6 +4,8 @@ import { sejarahData, getSejarahBySlug, getAdjacentSejarah } from "@/data/sejara
 import HeroBanner from "@/components/HeroBanner";
 import Breadcrumb from "@/components/Breadcrumb";
 import PrevNextNav from "@/components/PrevNextNav";
+import FootnoteText from "@/components/FootnoteText";
+import ReferenceList from "@/components/ReferenceList";
 
 export function generateStaticParams() {
   return ["id", "en"].flatMap((locale) =>
@@ -55,9 +57,9 @@ export default async function SejarahDetailPage({
       {/* Artikel */}
       <article className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
         <p className="text-charcoal text-base sm:text-lg leading-relaxed sm:leading-loose">
-          {detail}
+          <FootnoteText text={detail} scope={slug} />
         </p>
-        <p className="mt-10 text-xs text-charcoal/40 italic">{s.photoCredit}</p>
+        <ReferenceList items={item.referensi} scope={slug} />
       </article>
 
       {/* Prev / Next */}

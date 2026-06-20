@@ -83,7 +83,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <div className="md:hidden border-t border-white/10">
+        <div className="border-t border-white/10 bg-charcoal">
           <nav className="max-w-7xl mx-auto px-4 py-2 flex flex-col gap-0.5" aria-label="Menu mobile">
             {navLinks.map((link) => (
               <Link
