@@ -10,15 +10,15 @@ Target fitur selesai: **10 Juli 2026**. Sisa waktu 11–20 Juli khusus untuk rev
 ---
 
 ## Sprint 0 — Setup & Fondasi (19–21 Juni)
-- [ ] Finalisasi nama domain (`sawahluntodigital.my.id` / `ombilinheritage.my.id`)
-- [ ] Daftar kompetisi & domain di mediacloud.id (dapatkan domain .id + akses Sitejet)
+- [x] Finalisasi nama domain (`kotague.id`)
+- [x] Daftar kompetisi & domain di mediacloud.id (dapatkan domain .id + akses Sitejet)
 - [ ] Follow 4 akun IG panitia (@mediacloudindonesia, @pandi_id, @domaindotid, @dotidacademy) — syarat administrasi wajib
-- [ ] Setup project Vercel, hubungkan ke repo GitHub
-- [ ] Arahkan DNS domain .id ke Vercel
+- [x] Setup project Vercel, hubungkan ke repo GitHub
+- [x] Arahkan DNS domain .id ke Vercel
 - [ ] Setup struktur folder i18n (`app/[locale]/...`)
 - [ ] Setup Tailwind: token warna (terracotta, krem, charcoal, aksen teal)
 - [ ] Setup font lewat `next/font/google` (serif untuk judul, sans-serif untuk isi)
-- [ ] Mulai riset foto: cek kategori "Sawahlunto" di Wikimedia Commons
+- [x] Mulai riset foto: cek kategori "Sawahlunto" di Wikimedia Commons
 - [ ] Kirim pesan ke Dinas Pariwisata Sawahlunto minta izin pakai foto resmi (paralel, berjalan terus sampai Sprint 3)
 
 ## Sprint 1 — Komponen Inti + Beranda + Sejarah (22–26 Juni)
