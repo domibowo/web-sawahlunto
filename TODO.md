@@ -22,6 +22,7 @@ Target fitur selesai: **10 Juli 2026**. Sisa waktu 11–20 Juli khusus untuk rev
 - [ ] Kirim pesan ke Dinas Pariwisata Sawahlunto minta izin pakai foto resmi (paralel, berjalan terus sampai Sprint 3)
 
 ## Sprint 1 — Komponen Inti + Beranda + Sejarah (22–26 Juni)
+- [x] Setup github CI/CD 
 - [ ] Layout bersama: navbar responsive (hamburger di mobile, menu horizontal di tablet/desktop), toggle bahasa ID/EN, footer
 - [ ] Halaman Beranda: hero, intro, grid 6 kartu navigasi, CTA, footer
 - [ ] Halaman Sejarah (index): timeline 7 peristiwa
