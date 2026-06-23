@@ -1,6 +1,6 @@
 const id = {
   nav: {
-    siteName: "sawahlunto.id",
+    siteName: "Sawahlunto",
     sejarah: "Sejarah",
     budaya: "Budaya & Tradisi",
     kuliner: "Kuliner Khas",

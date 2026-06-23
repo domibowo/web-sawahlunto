@@ -2,7 +2,7 @@ import type { Dictionary } from "./id";
 
 const en: Dictionary = {
   nav: {
-    siteName: "sawahlunto.id",
+    siteName: "Sawahlunto",
     sejarah: "History",
     budaya: "Culture & Traditions",
     kuliner: "Local Cuisine",
