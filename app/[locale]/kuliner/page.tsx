@@ -1,5 +1,5 @@
 import { getDictionary } from "@/dictionaries";
-import { budayaData, budayaReferensi } from "@/data/budaya";
+import { kulinerData, kulinerReferensi } from "@/data/kuliner";
 import HeroBanner from "@/components/HeroBanner";
 import CTAButton from "@/components/CTAButton";
 import SafeImage from "@/components/SafeImage";
@@ -10,22 +10,22 @@ export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];
 }
 
-export default async function BudayaPage({
+export default async function KulinerPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
-  const { budaya: b } = dict;
+  const { kuliner: k } = dict;
   const lang = locale as "id" | "en";
 
   return (
     <>
-      <HeroBanner size="sm" title={b.heroTitle} subtitle={b.intro} />
+      <HeroBanner size="sm" title={k.heroTitle} subtitle={k.intro} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex flex-col gap-16 sm:gap-20">
-        {budayaData.map((section, index) => {
+        {kulinerData.map((section, index) => {
           const isEven = index % 2 === 0;
           return (
             <section
@@ -47,22 +47,20 @@ export default async function BudayaPage({
                   {section.judul[lang]}
                 </h2>
                 <p className="text-charcoal-light text-base sm:text-lg leading-relaxed">
-                  <FootnoteText text={section.isi[lang]} scope="budaya" />
+                  <FootnoteText text={section.isi[lang]} scope="kuliner" />
                 </p>
               </div>
             </section>
           );
         })}
 
-        {/* Referensi — satu kali di bagian bawah */}
-        <ReferenceList items={budayaReferensi} scope="budaya" />
+        <ReferenceList items={kulinerReferensi} scope="kuliner" />
       </div>
 
-      {/* CTA */}
       <div className="flex justify-center pb-16 sm:pb-20">
         <CTAButton
-          href={`/${locale}/kuliner`}
-          label={b.nextKuliner}
+          href={`/${locale}/wisata`}
+          label={k.nextWisata}
           variant="outline"
         />
       </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -16,11 +17,15 @@ export default function Navbar({ locale, dict }: NavbarProps) {
   const pathname = usePathname();
   const { nav } = dict;
 
+  // Tutup drawer setiap kali pathname berubah (navigasi selesai)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  React.useEffect(() => { setMenuOpen(false); }, [pathname]);
+
   const navLinks = [
     { label: nav.sejarah, href: `/${locale}/sejarah` },
     { label: nav.budaya, href: `/${locale}/budaya` },
     { label: nav.kuliner, href: `/${locale}/kuliner` },
-    { label: nav.destinasi, href: `/${locale}/destinasi` },
+    { label: nav.destinasi, href: `/${locale}/wisata` },
     { label: nav.inovasi, href: `/${locale}/inovasi` },
     { label: nav.peta, href: `/${locale}/peta` },
   ];

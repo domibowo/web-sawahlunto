@@ -6,6 +6,8 @@ interface ReferenceListProps {
 }
 
 export default function ReferenceList({ items, scope }: ReferenceListProps) {
+  if (!items.length) return null;
+
   return (
     <section className="mt-10 pt-6 border-t border-cream-dark">
       <ol className="flex flex-col gap-1.5">

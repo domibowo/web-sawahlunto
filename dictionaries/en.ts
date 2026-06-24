@@ -64,6 +64,38 @@ const en: Dictionary = {
     nextKuliner: "Continue to Local Cuisine →",
     photoCredit: "Source: [to be filled]",
   },
+  kuliner: {
+    heroTitle: "Local Cuisine of Sawahlunto",
+    intro:
+      "Behind every bite lies a long story of spices, embers, and traditions passed down through generations in this mining city.",
+    nextWisata: "Continue to Tourist Destinations →",
+    photoCredit: "Source: [to be filled]",
+  },
+  inovasi: {
+    heroTitle: "Innovation & Technology of Sawahlunto",
+    intro:
+      "A mining city that rose again — not only through tourism, but through the creativity of its people, cultural collaboration, and technology bringing Sawahlunto to the world stage.",
+    nextPeta: "Continue to City Map →",
+    disclaimerTambang: "Based on recent reporting — developments are still ongoing.",
+    photoCredit: "Source: [to be filled]",
+  },
+  wisata: {
+    heroTitle: "Tourist Destinations of Sawahlunto",
+    intro:
+      "From underground mining tunnels to a stunning lake formed in an old excavation — every corner of Sawahlunto holds a story worth exploring in person.",
+    backToWisata: "← Back to Tourist Destinations",
+    backToHome: "Home",
+    breadcrumbWisata: "Tourist Destinations",
+    nextInovasi: "Continue to Innovation & Technology →",
+    prevDest: "← Previous destination",
+    nextDest: "Next destination →",
+    infoPraktisTitle: "Practical Info",
+    jamBukaLabel: "Opening Hours",
+    hargaTiketLabel: "Admission",
+    tipsLabel: "Visitor Tips",
+    disclaimer: "Prices & opening hours are subject to change — please confirm before visiting.",
+    photoCredit: "Source: [to be filled]",
+  },
   footer: {
     credit: "Created by Team Nusantara Digital City · 2024",
     social: "Social media",
