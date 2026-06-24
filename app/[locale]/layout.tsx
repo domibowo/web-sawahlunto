@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Plus_Jakarta_Sans } from "next/font/google";
+import { Lora, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,6 +13,12 @@ const lora = Lora({
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -40,7 +46,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${lora.variable} ${plusJakarta.variable} h-full`}
+      className={`${lora.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar locale={locale} dict={dict} />

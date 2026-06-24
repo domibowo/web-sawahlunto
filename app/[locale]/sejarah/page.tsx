@@ -44,10 +44,10 @@ export default async function SejarahPage({
 
                 {/* ── MOBILE: satu kolom, garis vertikal kiri ── */}
                 <div className="md:hidden flex gap-4 pb-8">
-                  {/* Garis + bubble */}
+                  {/* Garis + kicker tahun */}
                   <div className="flex flex-col items-center shrink-0">
-                    <div className="w-11 h-11 rounded-full bg-terracotta text-white flex items-center justify-center font-bold leading-none text-center shrink-0 z-10">
-                      <span className="text-[9px] sm:text-[10px] leading-tight px-1">{item.tahun}</span>
+                    <div className="w-11 flex items-center justify-center shrink-0 z-10 py-2">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.07em] text-terracotta font-semibold text-center leading-tight">{item.tahun}</span>
                     </div>
                     {!isLast && (
                       <div className="w-px flex-1 bg-cream-dark mt-1" />
@@ -117,10 +117,10 @@ export default async function SejarahPage({
                     )}
                   </div>
 
-                  {/* Tengah: garis + bubble tahun */}
+                  {/* Tengah: garis + kicker tahun */}
                   <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-full bg-terracotta text-white flex items-center justify-center font-bold text-center leading-tight z-10 shrink-0 px-2">
-                      <span className="text-[10px] leading-tight">{item.tahun}</span>
+                    <div className="w-16 flex items-center justify-center z-10 shrink-0 py-2">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.07em] text-terracotta font-semibold text-center leading-tight">{item.tahun}</span>
                     </div>
                     {!isLast && (
                       <div className="w-px flex-1 bg-cream-dark mt-1" />

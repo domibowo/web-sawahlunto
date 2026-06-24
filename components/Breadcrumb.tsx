@@ -12,19 +12,19 @@ interface BreadcrumbProps {
 export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav aria-label="Breadcrumb">
-      <ol className="flex items-center flex-wrap gap-1.5 text-xs text-charcoal/50">
+      <ol className="flex items-center flex-wrap gap-1.5 font-mono text-[11px] uppercase tracking-[0.07em]">
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-1.5">
-            {i > 0 && <span aria-hidden="true">/</span>}
+            {i > 0 && <span aria-hidden="true" className="text-charcoal/30">/</span>}
             {item.href ? (
               <Link
                 href={item.href}
-                className="hover:text-charcoal transition-colors"
+                className="text-charcoal-muted hover:text-terracotta transition-colors"
               >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-charcoal/70 truncate max-w-[160px] sm:max-w-xs" aria-current="page">
+              <span className="text-terracotta truncate max-w-40 sm:max-w-xs" aria-current="page">
                 {item.label}
               </span>
             )}

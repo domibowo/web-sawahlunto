@@ -35,11 +35,8 @@ export default function HeroBanner({
           priority
         />
       ) : (
-        <ImagePlaceholder className="absolute inset-0 w-full h-full" alt={imageAlt ?? title} />
+        <div className="absolute inset-0 bg-charcoal" />
       )}
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-charcoal/55" />
 
       {/* Content */}
       <div
@@ -48,7 +45,7 @@ export default function HeroBanner({
         }`}
       >
         {badge && (
-          <span className="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 sm:mb-4 tracking-wide uppercase">
+          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.08em] text-terracotta mb-3 sm:mb-4">
             {badge}
           </span>
         )}

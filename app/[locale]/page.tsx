@@ -67,8 +67,9 @@ export default async function HomePage({
         aria-label="Jelajahi halaman"
       >
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-          {cardKeys.map((key) => {
+          {cardKeys.map((key, index) => {
             const card = home.cards[key];
+            const colors = ["terracotta", "charcoal", "teal"] as const;
             return (
               <NavCard
                 key={key}
@@ -76,6 +77,7 @@ export default async function HomePage({
                 icon={cardIcons[key]}
                 label={card.title}
                 desc={card.desc}
+                color={colors[index % 3]}
               />
             );
           })}

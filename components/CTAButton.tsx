@@ -14,16 +14,17 @@ export default function CTAButton({
   className = "",
 }: CTAButtonProps) {
   const base =
-    "inline-block px-6 sm:px-8 py-3 rounded font-semibold text-sm sm:text-base transition-colors min-h-[44px] flex items-center justify-center";
+    "inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-full font-medium text-sm sm:text-base transition-colors min-h-11";
 
   const styles = {
-    primary: "bg-terracotta text-white hover:bg-terracotta-dark",
-    outline: "border-2 border-teal text-teal hover:bg-teal hover:text-white",
+    primary: "bg-terracotta text-cream hover:bg-terracotta-dark",
+    outline: "border-2 border-teal text-teal hover:bg-teal hover:text-cream",
   };
 
   return (
     <Link href={href} className={`${base} ${styles[variant]} ${className}`}>
       {label}
+      <span aria-hidden="true">→</span>
     </Link>
   );
 }

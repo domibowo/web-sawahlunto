@@ -6,6 +6,8 @@ interface ReferenceListProps {
 }
 
 export default function ReferenceList({ items, scope }: ReferenceListProps) {
+  if (!items.length) return null;
+
   return (
     <section className="mt-10 pt-6 border-t border-cream-dark">
       <ol className="flex flex-col gap-1.5">
@@ -24,7 +26,7 @@ export default function ReferenceList({ items, scope }: ReferenceListProps) {
                   href={ref.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-teal transition-colors underline underline-offset-2"
+                  className="text-teal hover:text-teal-dark transition-colors underline underline-offset-2"
                 >
                   {ref.sumber}
                 </a>
