@@ -65,7 +65,7 @@ const en: Dictionary = {
     photoCredit: "Source: [to be filled]",
   },
   footer: {
-    credit: "Created by Team Nusantara Digital City · 2024",
+    credit: "Created by Team Nusantara Digital City · 2026",
     social: "Social media",
     sumberLink: "Sources & references",
   },
