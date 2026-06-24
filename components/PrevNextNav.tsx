@@ -20,7 +20,7 @@ export default function PrevNextNav({
 }: PrevNextNavProps) {
   return (
     <nav
-      className="border-t border-cream-dark bg-white"
+      className="border-t border-cream-dark bg-cream"
       aria-label="Navigasi halaman"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-stretch sm:items-start justify-between gap-4">

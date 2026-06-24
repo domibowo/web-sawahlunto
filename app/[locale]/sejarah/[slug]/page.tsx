@@ -1,3 +1,4 @@
+import React from "react";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/dictionaries";
 import { sejarahData, getSejarahBySlug, getAdjacentSejarah } from "@/data/sejarah";
@@ -31,7 +32,7 @@ export default async function SejarahDetailPage({
   const { prev, next } = getAdjacentSejarah(slug);
 
   return (
-    <>
+    <React.Fragment key={slug}>
       {/* Breadcrumb bar */}
       <div className="bg-cream-dark border-b border-cream-dark/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3">
@@ -69,6 +70,6 @@ export default async function SejarahDetailPage({
         prevLabel={s.prevEvent}
         nextLabel={s.nextEvent}
       />
-    </>
+    </React.Fragment>
   );
 }

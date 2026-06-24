@@ -62,8 +62,40 @@ const id = {
     nextKuliner: "Lanjut ke Kuliner Khas →",
     photoCredit: "Sumber: [diisi nanti]",
   },
+  kuliner: {
+    heroTitle: "Kuliner Khas Sawahlunto",
+    intro:
+      "Di balik setiap gigitan, ada cerita panjang tentang bumbu, bara api, dan tradisi yang diwariskan turun-temurun di kota tambang ini.",
+    nextWisata: "Lanjut ke Destinasi Wisata →",
+    photoCredit: "Sumber: [diisi nanti]",
+  },
+  inovasi: {
+    heroTitle: "Inovasi & Teknologi Sawahlunto",
+    intro:
+      "Kota tambang yang bangkit bukan hanya lewat wisata, tapi juga lewat kreativitas warga, kolaborasi budaya, dan teknologi yang membawa Sawahlunto ke panggung dunia.",
+    nextPeta: "Lanjut ke Peta Kota →",
+    disclaimerTambang: "Berdasarkan pemberitaan terkini — perkembangan masih berlangsung.",
+    photoCredit: "Sumber: [diisi nanti]",
+  },
+  wisata: {
+    heroTitle: "Destinasi Wisata Sawahlunto",
+    intro:
+      "Dari terowongan tambang bawah tanah hingga danau bekas galian yang kini memesona — setiap sudut Sawahlunto menyimpan cerita yang layak dijelajahi langsung.",
+    backToWisata: "← Kembali ke Destinasi Wisata",
+    backToHome: "Beranda",
+    breadcrumbWisata: "Destinasi Wisata",
+    nextInovasi: "Lanjut ke Inovasi & Teknologi →",
+    prevDest: "← Destinasi sebelumnya",
+    nextDest: "Destinasi selanjutnya →",
+    infoPraktisTitle: "Info Praktis",
+    jamBukaLabel: "Jam Buka",
+    hargaTiketLabel: "Harga Tiket",
+    tipsLabel: "Tips Berkunjung",
+    disclaimer: "Harga & jam operasional dapat berubah, mohon konfirmasi sebelum berkunjung.",
+    photoCredit: "Sumber: [diisi nanti]",
+  },
   footer: {
-    credit: "Dibuat oleh Tim Nusantara Digital City · 2024",
+    credit: "Dibuat dengan cinta ❤️ oleh Adhitya dan Azzahra · 2026",
     social: "Media sosial",
     sumberLink: "Sumber & referensi",
   },
