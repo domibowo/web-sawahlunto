@@ -1,3 +1,5 @@
+import Image from "next/image";
+import ImagePlaceholder from "./ImagePlaceholder";
 
 interface HeroBannerProps {
   size?: "lg" | "sm";
@@ -24,15 +26,14 @@ export default function HeroBanner({
   return (
     <section className={`relative overflow-hidden ${heightMap[size]}`}>
       {imageSrc ? (
-        <>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={imageSrc}
-            alt={imageAlt ?? title}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-charcoal/55" />
-        </>
+        <Image
+          src={imageSrc}
+          alt={imageAlt ?? title}
+          width={5}
+          height={0}
+          className="absolute inset-0 w-full h-full object-cover"
+          priority
+        />
       ) : (
         <div className="absolute inset-0 bg-charcoal" />
       )}
