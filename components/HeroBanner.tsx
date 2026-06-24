@@ -1,4 +1,3 @@
-import ImagePlaceholder from "./ImagePlaceholder";
 
 interface HeroBannerProps {
   size?: "lg" | "sm";
@@ -25,18 +24,18 @@ export default function HeroBanner({
   return (
     <section className={`relative overflow-hidden ${heightMap[size]}`}>
       {imageSrc ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={imageSrc}
-          alt={imageAlt ?? title}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={imageSrc}
+            alt={imageAlt ?? title}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-charcoal/55" />
+        </>
       ) : (
-        <ImagePlaceholder className="absolute inset-0 w-full h-full" alt={imageAlt ?? title} />
+        <div className="absolute inset-0 bg-charcoal" />
       )}
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-charcoal/55" />
 
       {/* Content */}
       <div
@@ -45,7 +44,7 @@ export default function HeroBanner({
         }`}
       >
         {badge && (
-          <span className="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 sm:mb-4 tracking-wide uppercase">
+          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.08em] text-terracotta mb-3 sm:mb-4">
             {badge}
           </span>
         )}

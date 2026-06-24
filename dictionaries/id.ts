@@ -63,7 +63,7 @@ const id = {
     photoCredit: "Sumber: [diisi nanti]",
   },
   footer: {
-    credit: "Dibuat oleh Tim Nusantara Digital City · 2024",
+    credit: "Dibuat dengan cinta ❤️ oleh Adhitya dan Azzahra · 2026",
     social: "Media sosial",
     sumberLink: "Sumber & referensi",
   },

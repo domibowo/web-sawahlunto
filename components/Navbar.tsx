@@ -28,7 +28,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
   const isActive = (href: string) => pathname.startsWith(href);
 
   return (
-    <header className="bg-charcoal text-cream sticky top-0 z-50">
+    <header className="bg-charcoal text-cream sticky top-0 z-50 will-change-transform">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
@@ -47,8 +47,8 @@ export default function Navbar({ locale, dict }: NavbarProps) {
                 href={link.href}
                 className={`text-sm px-2 lg:px-3 py-1.5 rounded transition-colors ${
                   isActive(link.href)
-                    ? "text-cream bg-white/15 font-semibold"
-                    : "text-cream/70 hover:text-cream hover:bg-white/10"
+                    ? "text-cream bg-cream/15 font-semibold"
+                    : "text-cream/70 hover:text-cream hover:bg-cream/10"
                 }`}
                 aria-current={isActive(link.href) ? "page" : undefined}
               >
@@ -63,7 +63,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
             <LanguageToggle locale={locale} />
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 rounded text-cream hover:bg-white/10 transition-colors min-h-11 min-w-11 flex items-center justify-center"
+              className="p-2 rounded text-cream hover:bg-cream/10 transition-colors min-h-11 min-w-11 flex items-center justify-center"
               aria-label={menuOpen ? "Tutup menu" : "Buka menu"}
               aria-expanded={menuOpen}
             >
@@ -83,7 +83,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <div className="border-t border-white/10 bg-charcoal">
+        <div className="border-t border-cream/10 bg-charcoal">
           <nav className="max-w-7xl mx-auto px-4 py-2 flex flex-col gap-0.5" aria-label="Menu mobile">
             {navLinks.map((link) => (
               <Link
@@ -92,8 +92,8 @@ export default function Navbar({ locale, dict }: NavbarProps) {
                 onClick={() => setMenuOpen(false)}
                 className={`text-sm px-3 py-3 rounded transition-colors min-h-11 flex items-center ${
                   isActive(link.href)
-                    ? "text-cream bg-white/15 font-semibold"
-                    : "text-cream/70 hover:text-cream hover:bg-white/10"
+                    ? "text-cream bg-cream/15 font-semibold"
+                    : "text-cream/70 hover:text-cream hover:bg-cream/10"
                 }`}
                 aria-current={isActive(link.href) ? "page" : undefined}
               >

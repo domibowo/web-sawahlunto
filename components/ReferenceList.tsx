@@ -24,7 +24,7 @@ export default function ReferenceList({ items, scope }: ReferenceListProps) {
                   href={ref.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-teal transition-colors underline underline-offset-2"
+                  className="text-teal hover:text-teal-dark transition-colors underline underline-offset-2"
                 >
                   {ref.sumber}
                 </a>
