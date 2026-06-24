@@ -4,6 +4,7 @@ import { sejarahData } from "@/data/sejarah";
 import HeroBanner from "@/components/HeroBanner";
 import CTAButton from "@/components/CTAButton";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Image from "next/image";
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];
@@ -21,16 +22,22 @@ export default async function SejarahPage({
 
   return (
     <>
-      <HeroBanner size="sm" title={s.heroTitle} subtitle={s.intro} />
+      <HeroBanner
+        size="sm"
+        title={s.heroTitle}
+        subtitle={s.intro}
+        imageSrc="https://r2.kotague.id/Sawahlunto/2.jpg"
+      />
 
       {/* Timeline */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <ol className="flex flex-col gap-0">
+        <ol className="flex flex-col gap-4">
           {sejarahData.map((item, index) => {
             const isLast = index === sejarahData.length - 1;
             const isEven = index % 2 === 0; // kiri = even, kanan = odd di desktop
             const judul = item.judul[lang];
             const ringkasan = item.ringkasan[lang];
+            const image = item.gambar;
 
             return (
               <li key={item.slug} className="relative">
@@ -70,12 +77,12 @@ export default async function SejarahPage({
                 <div className="hidden md:grid md:grid-cols-[1fr_80px_1fr] md:gap-0 pb-10">
 
                   {/* Kolom kiri */}
-                  <div className={`flex ${isEven ? "justify-end pr-8" : "justify-start pl-8"}`}>
+                  <div className={`flex justify-end pr-8`}>
                     {isEven ? (
                       /* Even → teks di kiri */
                       <div className="max-w-xs text-right">
                         <Link href={`/${locale}/sejarah/${item.slug}`}>
-                          <h2 className="font-serif text-xl font-semibold text-charcoal hover:text-teal transition-colors leading-snug">
+                          <h2 className="font-serif text-xl font-semibold text-charcoal hover:text-teal transition-colors line-clamp-1">
                             {judul}
                           </h2>
                         </Link>
@@ -91,11 +98,21 @@ export default async function SejarahPage({
                       </div>
                     ) : (
                       /* Odd → gambar di kiri */
-                      <Link href={`/${locale}/sejarah/${item.slug}`} className="block w-full max-w-xs">
-                        <ImagePlaceholder
-                          className="w-full aspect-video rounded-lg"
-                          alt={judul}
-                        />
+                      <Link href={`/${locale}/sejarah/${item.slug}`} className="relative block w-full max-w-xs aspect-video rounded-lg overflow-hidden shadow-xl">
+                        {item.gambar ?
+                          <Image
+                            src={item.gambar}
+                            alt={item.judul[lang]}
+                            fill
+                            className="object-cover transition-transform duration-500 ease-in-out hover:scale-125"
+                            priority
+                          />
+                          :
+                          <ImagePlaceholder
+                            className="w-full aspect-video rounded-lg"
+                            alt={judul}
+                          />
+                        }
                       </Link>
                     )}
                   </div>
@@ -111,20 +128,30 @@ export default async function SejarahPage({
                   </div>
 
                   {/* Kolom kanan */}
-                  <div className={`flex ${isEven ? "justify-start pl-8" : "justify-end pr-8"}`}>
+                  <div className={`flex justify-start pl-8`}>
                     {isEven ? (
                       /* Even → gambar di kanan */
-                      <Link href={`/${locale}/sejarah/${item.slug}`} className="block w-full max-w-xs">
-                        <ImagePlaceholder
-                          className="w-full aspect-video rounded-lg"
-                          alt={judul}
-                        />
+                      <Link href={`/${locale}/sejarah8/${item.slug}`} className="relative block w-full max-w-xs aspect-video rounded-lg overflow-hidden shadow-xl">
+                        {item.gambar ?
+                          <Image
+                            src={item.gambar}
+                            alt={item.judul[lang]}
+                            fill
+                            className="object-cover transition-transform duration-500 ease-in-out hover:scale-125"
+                            priority
+                          />
+                          :
+                          <ImagePlaceholder
+                            className="w-full aspect-video rounded-lg"
+                            alt={judul}
+                          />
+                        }
                       </Link>
                     ) : (
                       /* Odd → teks di kanan */
                       <div className="max-w-xs">
                         <Link href={`/${locale}/sejarah/${item.slug}`}>
-                          <h2 className="font-serif text-xl font-semibold text-charcoal hover:text-teal transition-colors leading-snug">
+                          <h2 className="font-serif text-xl font-semibold text-charcoal hover:text-teal transition-colors line-clamp-1">
                             {judul}
                           </h2>
                         </Link>
