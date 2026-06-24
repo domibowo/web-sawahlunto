@@ -22,7 +22,7 @@ export default function LanguageToggle({ locale, className = "" }: LanguageToggl
   return (
     <Link
       href={otherPath}
-      className={`text-xs font-semibold px-2.5 py-1.5 rounded border border-teal text-teal hover:bg-teal hover:text-white transition-colors min-h-[36px] inline-flex items-center ${className}`}
+      className={`text-xs font-semibold px-2.5 py-1.5 rounded border border-teal text-teal hover:bg-teal hover:text-cream transition-colors min-h-9 inline-flex items-center ${className}`}
       aria-label={`Ganti ke bahasa ${otherLocale === "id" ? "Indonesia" : "Inggris"}`}
     >
       {otherLocale.toUpperCase()}

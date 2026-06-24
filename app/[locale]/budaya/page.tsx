@@ -38,11 +38,11 @@ export default async function BudayaPage({
                   <img
                     src={section.gambar}
                     alt={section.judul[lang]}
-                    className="w-full aspect-video object-cover rounded-xl"
+                    className="w-full aspect-video object-cover"
                   />
                 ) : (
                   <ImagePlaceholder
-                    className="w-full aspect-video rounded-xl"
+                    className="w-full aspect-video"
                     alt={section.judul[lang]}
                   />
                 )}
