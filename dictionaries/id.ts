@@ -84,6 +84,7 @@ const id = {
     backToWisata: "← Kembali ke Destinasi Wisata",
     backToHome: "Beranda",
     breadcrumbWisata: "Destinasi Wisata",
+    jelajahi: "Jelajahi →",
     nextInovasi: "Lanjut ke Inovasi & Teknologi →",
     prevDest: "← Destinasi sebelumnya",
     nextDest: "Destinasi selanjutnya →",
@@ -93,6 +94,13 @@ const id = {
     tipsLabel: "Tips Berkunjung",
     disclaimer: "Harga & jam operasional dapat berubah, mohon konfirmasi sebelum berkunjung.",
     photoCredit: "Sumber: [diisi nanti]",
+  },
+  peta: {
+    heroTitle: "Peta Kota Sawahlunto",
+    intro:
+      "Jelajahi setiap sudut kota — dari terowongan tambang di tengah kota hingga danau biru dan puncak perbukitan di pinggiran.",
+    tapHint: "Tap titik untuk melihat detail destinasi",
+    backToHome: "Kembali ke Beranda →",
   },
   footer: {
     credit: "Dibuat dengan cinta ❤️ oleh Adhitya dan Azzahra · 2026",
