@@ -45,7 +45,7 @@ export default function HeroBanner({
         }`}
       >
         {badge && (
-          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.08em] text-terracotta mb-3 sm:mb-4">
+          <span className="inline-block font-mono text-sm sm:text-base uppercase tracking-[0.08em] text-terracotta mb-3 sm:mb-4">
             {badge}
           </span>
         )}

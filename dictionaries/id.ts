@@ -50,7 +50,7 @@ const id = {
     backToSejarah: "← Kembali ke Sejarah",
     backToHome: "Beranda",
     breadcrumbSejarah: "Sejarah",
-    nextCulture: "Lanjut ke Budaya & Tradisi →",
+    nextCulture: "Lanjut ke Budaya & Tradisi",
     prevEvent: "← Peristiwa sebelumnya",
     nextEvent: "Peristiwa selanjutnya →",
     photoCredit: "Sumber: [diisi nanti]",
@@ -59,21 +59,21 @@ const id = {
     heroTitle: "Budaya & Tradisi Sawahlunto",
     intro:
       "Dari rahim penderitaan para pekerja tambang lintas etnis, Sawahlunto mewarisi kekayaan budaya yang unik dan tak tertandingi — bahasa, tenun, dan perayaan yang menjadi penanda identitas kota.",
-    nextKuliner: "Lanjut ke Kuliner Khas →",
+    nextKuliner: "Lanjut ke Kuliner Khas",
     photoCredit: "Sumber: [diisi nanti]",
   },
   kuliner: {
     heroTitle: "Kuliner Khas Sawahlunto",
     intro:
       "Di balik setiap gigitan, ada cerita panjang tentang bumbu, bara api, dan tradisi yang diwariskan turun-temurun di kota tambang ini.",
-    nextWisata: "Lanjut ke Destinasi Wisata →",
+    nextWisata: "Lanjut ke Destinasi Wisata",
     photoCredit: "Sumber: [diisi nanti]",
   },
   inovasi: {
     heroTitle: "Inovasi & Teknologi Sawahlunto",
     intro:
       "Kota tambang yang bangkit bukan hanya lewat wisata, tapi juga lewat kreativitas warga, kolaborasi budaya, dan teknologi yang membawa Sawahlunto ke panggung dunia.",
-    nextPeta: "Lanjut ke Peta Kota →",
+    nextPeta: "Lanjut ke Peta Kota",
     disclaimerTambang: "Berdasarkan pemberitaan terkini — perkembangan masih berlangsung.",
     photoCredit: "Sumber: [diisi nanti]",
   },
@@ -84,8 +84,8 @@ const id = {
     backToWisata: "← Kembali ke Destinasi Wisata",
     backToHome: "Beranda",
     breadcrumbWisata: "Destinasi Wisata",
-    jelajahi: "Jelajahi →",
-    nextInovasi: "Lanjut ke Inovasi & Teknologi →",
+    jelajahi: "Jelajahi",
+    nextInovasi: "Lanjut ke Inovasi & Teknologi",
     prevDest: "← Destinasi sebelumnya",
     nextDest: "Destinasi selanjutnya →",
     infoPraktisTitle: "Info Praktis",
@@ -100,7 +100,7 @@ const id = {
     intro:
       "Jelajahi setiap sudut kota — dari terowongan tambang di tengah kota hingga danau biru dan puncak perbukitan di pinggiran.",
     tapHint: "Tap titik untuk melihat detail destinasi",
-    backToHome: "Kembali ke Beranda →",
+    backToHome: "Kembali ke Beranda",
     toggleIlustrasi: "Peta ilustrasi",
     toggleSungguhan: "Peta sungguhan",
     needsInternet: "Membutuhkan koneksi internet",

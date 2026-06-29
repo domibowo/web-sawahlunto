@@ -57,13 +57,7 @@ export default function PetaSungguhan({ locale, lang }: { locale: string; lang: 
 
       m.addControl(new maplibre.NavigationControl(), "top-right");
       m.on("error", (e) => {
-        const err = e.error as { message?: string; status?: number; url?: string } | undefined;
-        console.error("[MapLibre error]", {
-          message: err?.message,
-          status: err?.status,
-          url: (e as { source?: { url?: string } }).source?.url ?? (err as { url?: string } | undefined)?.url,
-          raw: e,
-        });
+        console.error("[MapLibre]", (e.error as { message?: string })?.message ?? e);
       });
 
       m.on("load", () => {
@@ -128,10 +122,7 @@ export default function PetaSungguhan({ locale, lang }: { locale: string; lang: 
   return (
     <>
       {/* maplibre-gl CSS — loaded inline once per page */}
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css"
-      />
+      <link rel="stylesheet" href="/maps/maplibre-gl.css" />
       <div
         ref={containerRef}
         style={{ width: "100%", height: "420px" }}
