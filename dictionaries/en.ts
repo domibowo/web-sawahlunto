@@ -52,7 +52,7 @@ const en: Dictionary = {
     backToSejarah: "← Back to History",
     backToHome: "Home",
     breadcrumbSejarah: "History",
-    nextCulture: "Continue to Culture & Traditions →",
+    nextCulture: "Continue to Culture & Traditions",
     prevEvent: "← Previous event",
     nextEvent: "Next event →",
     photoCredit: "Source: [to be filled]",
@@ -61,21 +61,21 @@ const en: Dictionary = {
     heroTitle: "Culture & Traditions of Sawahlunto",
     intro:
       "From the suffering of multi-ethnic mine workers, Sawahlunto inherited a unique and unmatched cultural richness — language, weaving, and celebrations that mark the city's identity.",
-    nextKuliner: "Continue to Local Cuisine →",
+    nextKuliner: "Continue to Local Cuisine",
     photoCredit: "Source: [to be filled]",
   },
   kuliner: {
     heroTitle: "Local Cuisine of Sawahlunto",
     intro:
       "Behind every bite lies a long story of spices, embers, and traditions passed down through generations in this mining city.",
-    nextWisata: "Continue to Tourist Destinations →",
+    nextWisata: "Continue to Tourist Destinations",
     photoCredit: "Source: [to be filled]",
   },
   inovasi: {
     heroTitle: "Innovation & Technology of Sawahlunto",
     intro:
       "A mining city that rose again — not only through tourism, but through the creativity of its people, cultural collaboration, and technology bringing Sawahlunto to the world stage.",
-    nextPeta: "Continue to City Map →",
+    nextPeta: "Continue to City Map",
     disclaimerTambang: "Based on recent reporting — developments are still ongoing.",
     photoCredit: "Source: [to be filled]",
   },
@@ -86,8 +86,8 @@ const en: Dictionary = {
     backToWisata: "← Back to Tourist Destinations",
     backToHome: "Home",
     breadcrumbWisata: "Tourist Destinations",
-    jelajahi: "Explore →",
-    nextInovasi: "Continue to Innovation & Technology →",
+    jelajahi: "Explore",
+    nextInovasi: "Continue to Innovation & Technology",
     prevDest: "← Previous destination",
     nextDest: "Next destination →",
     infoPraktisTitle: "Practical Info",
@@ -102,7 +102,7 @@ const en: Dictionary = {
     intro:
       "Explore every corner of the city — from the mining tunnels in the heart of town to the blue lake and hilltop viewpoints on the outskirts.",
     tapHint: "Tap a marker to see destination details",
-    backToHome: "Back to Home →",
+    backToHome: "Back to Home",
     toggleIlustrasi: "Illustrated map",
     toggleSungguhan: "Live map",
     needsInternet: "Requires internet connection",

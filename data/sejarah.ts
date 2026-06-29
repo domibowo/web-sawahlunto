@@ -31,6 +31,30 @@ export const sejarahData: TimelineEvent[] = [
     ],
   },
   {
+    slug: "kota-didirikan",
+    tahun: "1888",
+    judul: {
+      id: "Sawahlunto Didirikan sebagai Kota",
+      en: "Sawahlunto Founded as a City",
+    },
+    ringkasan: {
+      id: "Pemerintah Hindia Belanda menetapkan kawasan ini sebagai kota pada 1 Desember 1888 — tanggal yang kini diperingati sebagai Hari Jadi Kota Sawahlunto.",
+      en: "The Dutch East Indies government designated this area as a city on December 1, 1888 — a date now commemorated as Sawahlunto's City Anniversary.",
+    },
+    detail: {
+      id: "Pada 1 Desember 1888, pemerintah Hindia Belanda menetapkan batas-batas wilayah ibu kota Afdeeling di kawasan ini — tanggal yang sejak itu diperingati sebagai Hari Jadi Kota Sawahlunto.[1] Dari desa kecil yang dikelilingi hutan, kawasan ini berangsur berkembang menjadi permukiman pekerja tambang dengan berbagai fasilitas pendukung.",
+      en: "On December 1, 1888, the Dutch East Indies government established the boundaries of the Afdeeling capital in this area — a date that has since been commemorated as Sawahlunto's City Anniversary.[1] From a small village surrounded by forest, the area gradually developed into a mining workers' settlement with various supporting facilities.",
+    },
+    gambar: "https://r2.kotague.id/Sawahlunto/19.jpg",
+    referensi: [
+      {
+        nomor: 1,
+        sumber: "Portal Resmi Kota Sawahlunto",
+        url: "https://portal.sawahluntokota.go.id/sejarah-kota-sawahlunto/",
+      },
+    ],
+  },
+  {
     slug: "tambang-dibuka",
     tahun: "1891",
     judul: {
@@ -66,8 +90,8 @@ export const sejarahData: TimelineEvent[] = [
       en: "A railway was built to transport coal from Sawahlunto to the port of Teluk Bayur in Padang.",
     },
     detail: {
-      id: "Medan pegunungan yang terjal tidak menghalangi Belanda mengangkut hasil tambangnya. Mereka membangun jalur kereta rel gigi (rack railway) sepanjang 155 kilometer yang menghubungkan Sawahlunto dengan pelabuhan Emmahaven, lengkap dengan jembatan dan terowongan.[1] Pelabuhan itu kini dikenal sebagai Teluk Bayur.[2] Stasiun kereta dengan fasilitas lengkap dibangun pada 1918, dan kini bangunan itu menjadi Museum Kereta Api Sawahlunto.[2]",
-      en: "The rugged mountain terrain did not stop the Dutch from transporting their mining output. They built a 155-kilometer rack railway connecting Sawahlunto to Emmahaven port, complete with bridges and tunnels.[1] That port is now known as Teluk Bayur.[2] A fully-equipped train station was built in 1918, and that building is now the Sawahlunto Railway Museum.[2]",
+      id: "Untuk mengangkut hasil tambang, Belanda membangun jalur kereta rel gigi sepanjang 155 kilometer yang menghubungkan Sawahlunto dengan Pelabuhan Emmahaven (kini Teluk Bayur) di Padang.[1] Infrastruktur ini menjadi tulang punggung distribusi batu bara Ombilin untuk memenuhi kebutuhan energi di Hindia Belanda.[2] Stasiun kereta dengan fasilitas lengkap dibangun pada 1918, kini menjadi Museum Kereta Api Sawahlunto.",
+      en: "To transport mining output, the Dutch built a 155-kilometer rack railway connecting Sawahlunto to Emmahaven Port (now Teluk Bayur) in Padang.[1] This infrastructure became the backbone of Ombilin coal distribution to meet the Dutch East Indies' energy needs.[2] A fully-equipped train station was built in 1918, now home to the Sawahlunto Railway Museum.",
     },
     gambar: "https://r2.kotague.id/Sawahlunto/collectie_tropenmuseum.jpg",
     referensi: [
@@ -95,25 +119,20 @@ export const sejarahData: TimelineEvent[] = [
       en: "Orang Rantai — Thousands of workers, many of them prisoners, were forced to work with their feet chained in inhumane conditions.",
     },
     detail: {
-      id: "Tenaga kerja tambang Ombilin datang dari latar yang beragam: warga Minangkabau setempat, pekerja kontrak dari Jawa dan Tiongkok, serta tahanan dari berbagai wilayah jajahan Belanda.[1] Kelompok tahanan inilah yang dipekerjakan secara paksa dengan kaki dirantai — mereka yang kemudian dikenal sebagai 'orang rantai'.[2] Jejak mereka masih bisa disaksikan hari ini di terowongan Lubang Mbah Soero, yang namanya diambil dari seorang mandor asal Jawa bernama Soerono. Dari percampuran berbagai latar belakang pekerja inilah lahir bahasa kreol unik bernama Tansi (disebut UNESCO sebagai 'Tangsi'), yang kini terus dijaga oleh generasi muda Sawahlunto.[3]",
-      en: "The Ombilin mine workforce came from diverse backgrounds: local Minangkabau residents, contract workers from Java and China, and prisoners from various Dutch colonial territories.[1] It was this group of prisoners who were forced to work with their feet shackled — they became known as 'orang rantai' (chained people).[2] Their traces can still be seen today in the Lubang Mbah Soero tunnel, named after a Javanese foreman named Soerono. From this mixing of backgrounds was born a unique creole language called Tansi (referred to by UNESCO as 'Tangsi'), still preserved by Sawahlunto's younger generations today.[3]",
+      id: "Tenaga kerja tambang Ombilin datang dari latar yang beragam: warga Minangkabau setempat, pekerja kontrak dari Jawa dan Tiongkok, serta tahanan dari berbagai wilayah jajahan Belanda.[1] Kelompok tahanan inilah yang dipekerjakan secara paksa dengan kaki dirantai — mereka yang kemudian dikenal sebagai 'orang rantai'.[1] Jejak mereka masih bisa disaksikan hari ini di terowongan Lubang Mbah Soero, yang namanya diambil dari seorang mandor asal Jawa bernama Soerono. Dari percampuran berbagai latar belakang pekerja inilah lahir bahasa kreol unik bernama Tansi (disebut UNESCO sebagai 'Tangsi'), yang kini terus dijaga oleh generasi muda Sawahlunto.[2]",
+      en: "The Ombilin mine workforce came from diverse backgrounds: local Minangkabau residents, contract workers from Java and China, and prisoners from various Dutch colonial territories.[1] It was this group of prisoners who were forced to work with their feet shackled — they became known as 'orang rantai' (chained people).[1] Their traces can still be seen today in the Lubang Mbah Soero tunnel, named after a Javanese foreman named Soerono. From this mixing of backgrounds was born a unique creole language called Tansi (referred to by UNESCO as 'Tangsi'), still preserved by Sawahlunto's younger generations today.[2]",
     },
     gambar: "https://r2.kotague.id/Sawahlunto/15.jpg",
     referensi: [
       {
         nomor: 1,
-        sumber: "UNESCO World Heritage Centre",
-        url: "https://whc.unesco.org/en/list/1610/",
+        sumber: "BBC Indonesia",
+        url: "https://www.bbc.com/indonesia/articles/cgm704rzjl3o",
       },
       {
         nomor: 2,
-        sumber: "Dokumen Nominasi UNESCO",
-        url: "https://whc.unesco.org/document/176199",
-      },
-      {
-        nomor: 3,
-        sumber: "UNESCO Jakarta",
-        url: "https://whc.unesco.org/en/news/2662",
+        sumber: "UNESCO World Heritage Centre",
+        url: "https://whc.unesco.org/en/list/1610/",
       },
     ],
   },
@@ -153,8 +172,8 @@ export const sejarahData: TimelineEvent[] = [
       en: "Coal reserves dwindled, production halted, and the city's population shrank drastically.",
     },
     detail: {
-      id: "Setelah kemerdekaan, tambang Ombilin dikelola pemerintah Indonesia hingga operasi skala besarnya berakhir pada 2002, seiring menipisnya cadangan batu bara dan naiknya biaya operasional.[1] Banyak penduduk kehilangan pekerjaan dan pindah ke kota lain. Sawahlunto pun berada di ambang menjadi kota mati.[2]",
-      en: "After independence, the Ombilin mine was managed by the Indonesian government until its large-scale operations ended in 2002, as coal reserves thinned and operating costs rose.[1] Many residents lost their jobs and moved to other cities. Sawahlunto was on the verge of becoming a ghost town.[2]",
+      id: "Setelah kemerdekaan, tambang Ombilin dikelola pemerintah Indonesia. Memasuki awal tahun 2000-an, cadangan batu bara di area tambang terbuka mulai menipis dan operasi skala besar berakhir pada 2002.[1] Banyak penduduk kehilangan pekerjaan dan pindah ke kota lain, membuat Sawahlunto berada di ambang menjadi kota mati.",
+      en: "After independence, the Ombilin mine was managed by the Indonesian government. Entering the early 2000s, coal reserves in the open-pit mining area began to thin and large-scale operations ended in 2002.[1] Many residents lost their jobs and moved to other cities, leaving Sawahlunto on the verge of becoming a ghost town.",
     },
     gambar: "https://r2.kotague.id/Sawahlunto/10.jpg",
     referensi: [
