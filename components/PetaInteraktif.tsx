@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { petaHotspots } from "@/data/peta";
 
 // Warna hotspot bergantian; pusat-kota selalu charcoal
@@ -33,8 +36,8 @@ type LabelPos = {
 
 const LABEL_POS: Record<string, LabelPos> = {
   "pusat-kota":             { x: -14, y: 0,  anchor: "end",    line1dy: -4,  line2dy: 10 },
-  "lubang-mbah-soero":      { x: -14, y: 0,  anchor: "end",    line1dy: -10, line2dy: 3 },
-  "museum-goedang-ransoem": { x: 0,   y: -14, anchor: "middle", line1dy: -10, line2dy: 3 },
+  "lubang-mbah-soero":      { x: -14, y: 0,  anchor: "end",    line1dy: -10, line2dy: 11 },
+  "museum-goedang-ransoem": { x: 14,  y: 0,  anchor: "start",  line1dy: -10, line2dy: 11 },
   "museum-kereta-api":      { x: 14,  y: 0,  anchor: "start",  line1dy: -4,  line2dy: 9 },
   "puncak-cemara":          { x: 14,  y: 0,  anchor: "start",  line1dy: -6,  line2dy: 7 },
   "danau-biru":             { x: 14,  y: 0,  anchor: "start",  line1dy: 4,   line2dy: 14 },
@@ -47,7 +50,30 @@ interface Props {
 
 export default function PetaInteraktif({ locale, lang }: Props) {
   return (
-    <div className="w-full overflow-x-auto">
+    <TransformWrapper
+      initialScale={1}
+      minScale={0.8}
+      maxScale={4}
+      centerOnInit
+      wheel={{ step: 0.05 }}
+      pinch={{ step: 5 }}
+    >
+      {({ resetTransform }) => (
+        <>
+          {/* Tombol reset zoom — hanya muncul di mobile via CSS */}
+          <div className="flex justify-end mb-1 md:hidden">
+            <button
+              onClick={() => resetTransform()}
+              className="text-xs text-charcoal/50 border border-charcoal/20 rounded px-2 py-0.5"
+            >
+              Reset zoom
+            </button>
+          </div>
+          <TransformComponent
+            wrapperStyle={{ width: "100%", overflow: "visible" }}
+            contentStyle={{ width: "100%" }}
+          >
+    <div className="w-full overflow-x-auto touch-none">
       <svg
         viewBox="0 0 680 540"
         xmlns="http://www.w3.org/2000/svg"
@@ -150,5 +176,9 @@ export default function PetaInteraktif({ locale, lang }: Props) {
         })}
       </svg>
     </div>
+          </TransformComponent>
+        </>
+      )}
+    </TransformWrapper>
   );
 }

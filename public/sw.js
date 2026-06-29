@@ -10,6 +10,11 @@ const PRECACHE_URLS = [
   "/id/",
   "/en/",
   "/offline.html",
+  // Aset peta (sprite kecil, ~50KB) di-precache supaya peta sungguhan tidak blank saat pertama offline
+  "/maps/sprites/light.json",
+  "/maps/sprites/light.png",
+  "/maps/sprites/light@2x.json",
+  "/maps/sprites/light@2x.png",
 ];
 
 // ─── Install ─────────────────────────────────────────────────────────────────

@@ -101,9 +101,12 @@ const id = {
       "Jelajahi setiap sudut kota — dari terowongan tambang di tengah kota hingga danau biru dan puncak perbukitan di pinggiran.",
     tapHint: "Tap titik untuk melihat detail destinasi",
     backToHome: "Kembali ke Beranda →",
+    toggleIlustrasi: "Peta ilustrasi",
+    toggleSungguhan: "Peta sungguhan",
+    needsInternet: "Membutuhkan koneksi internet",
   },
   footer: {
-    credit: "Dibuat dengan cinta ❤️ oleh Adhitya dan Azzahra · 2026",
+    credit: "Dibuat oleh tim kreatif · 2026",
     social: "Media sosial",
     sumberLink: "Sumber & referensi",
   },

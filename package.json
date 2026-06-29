@@ -7,12 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "optimize-images": "node --input-type=module scripts/optimize-images.js"
+    "optimize-images": "node --input-type=module scripts/optimize-images.js",
+    "download-map": "node scripts/download-map.mjs"
   },
   "dependencies": {
+    "maplibre-gl": "^4.7.1",
     "next": "16.2.9",
+    "pmtiles": "^4.4.1",
+    "protomaps-themes-base": "^4.5.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-zoom-pan-pinch": "^4.0.3"
   },
   "engines": {
     "node": ">=22"

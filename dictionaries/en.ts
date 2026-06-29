@@ -103,6 +103,9 @@ const en: Dictionary = {
       "Explore every corner of the city — from the mining tunnels in the heart of town to the blue lake and hilltop viewpoints on the outskirts.",
     tapHint: "Tap a marker to see destination details",
     backToHome: "Back to Home →",
+    toggleIlustrasi: "Illustrated map",
+    toggleSungguhan: "Live map",
+    needsInternet: "Requires internet connection",
   },
   footer: {
     credit: "Created by Team Nusantara Digital City · 2026",
