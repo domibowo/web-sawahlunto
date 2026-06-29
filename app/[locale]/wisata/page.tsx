@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getDictionary } from "@/dictionaries";
 import { wisataData } from "@/data/wisata";
 import HeroBanner from "@/components/HeroBanner";
@@ -8,8 +7,6 @@ import SafeImage from "@/components/SafeImage";
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];
 }
-
-const cardColors = ["bg-terracotta", "bg-charcoal", "bg-teal"] as const;
 
 export default async function WisataPage({
   params,
@@ -25,52 +22,51 @@ export default async function WisataPage({
     <>
       <HeroBanner size="sm" title={w.heroTitle} subtitle={w.intro} />
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
-          {wisataData.map((item, index) => {
-            const color = cardColors[index % cardColors.length];
-            return (
-              <Link
-                key={item.slug}
-                href={`/${locale}/wisata/${item.slug}`}
-                className="group block"
-              >
-                {/* Gambar */}
-                <div className="w-full aspect-video overflow-hidden">
-                  <SafeImage
-                    src={item.gambar}
-                    alt={item.nama[lang]}
-                    className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex flex-col gap-16 sm:gap-20">
+        {wisataData.map((item, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <section
+              key={item.slug}
+              className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-8 md:gap-12 items-center`}
+            >
+              {/* Gambar */}
+              <div className="w-full md:w-2/5 shrink-0">
+                <SafeImage
+                  src={item.gambar}
+                  alt={item.nama[lang]}
+                  className="w-full aspect-video"
+                />
+              </div>
+
+              {/* Teks */}
+              <div className="flex-1">
+                <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-charcoal leading-snug mb-4">
+                  {item.nama[lang]}
+                </h2>
+                <p className="text-charcoal-light text-base sm:text-lg leading-relaxed">
+                  {item.ringkasan[lang]}
+                </p>
+                <div className="mt-6">
+                  <CTAButton
+                    href={`/${locale}/wisata/${item.slug}`}
+                    label={w.jelajahi}
+                    variant="primary"
                   />
                 </div>
+              </div>
+            </section>
+          );
+        })}
+      </div>
 
-                {/* Kartu blok warna datar */}
-                <div className={`${color} p-5 min-h-[140px] flex flex-col justify-between`}>
-                  <div>
-                    <h2 className="font-serif text-lg font-semibold text-cream leading-snug mb-2">
-                      {item.nama[lang]}
-                    </h2>
-                    <p className="text-cream/75 text-sm leading-relaxed line-clamp-3">
-                      {item.ringkasan[lang]}
-                    </p>
-                  </div>
-                  <span className="mt-4 inline-block font-mono text-[10px] uppercase tracking-[0.08em] text-cream/60">
-                    Jelajahi →
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-
-        <div className="mt-14 sm:mt-20 flex justify-center">
-          <CTAButton
-            href={`/${locale}/inovasi`}
-            label={w.nextInovasi}
-            variant="outline"
-          />
-        </div>
-      </section>
+      <div className="flex justify-center pb-16 sm:pb-20">
+        <CTAButton
+          href={`/${locale}/inovasi`}
+          label={w.nextInovasi}
+          variant="outline"
+        />
+      </div>
     </>
   );
 }

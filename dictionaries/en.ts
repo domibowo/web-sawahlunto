@@ -86,6 +86,7 @@ const en: Dictionary = {
     backToWisata: "← Back to Tourist Destinations",
     backToHome: "Home",
     breadcrumbWisata: "Tourist Destinations",
+    jelajahi: "Explore →",
     nextInovasi: "Continue to Innovation & Technology →",
     prevDest: "← Previous destination",
     nextDest: "Next destination →",
@@ -95,6 +96,16 @@ const en: Dictionary = {
     tipsLabel: "Visitor Tips",
     disclaimer: "Prices & opening hours are subject to change — please confirm before visiting.",
     photoCredit: "Source: [to be filled]",
+  },
+  peta: {
+    heroTitle: "Map of Sawahlunto",
+    intro:
+      "Explore every corner of the city — from the mining tunnels in the heart of town to the blue lake and hilltop viewpoints on the outskirts.",
+    tapHint: "Tap a marker to see destination details",
+    backToHome: "Back to Home →",
+    toggleIlustrasi: "Illustrated map",
+    toggleSungguhan: "Live map",
+    needsInternet: "Requires internet connection",
   },
   footer: {
     credit: "Created by Team Nusantara Digital City · 2026",

@@ -20,6 +20,9 @@
 # production
 /build
 
+# gambar hasil optimasi — di-upload ke R2, tidak ikut Vercel
+/dist
+
 # misc
 .DS_Store
 *.pem
