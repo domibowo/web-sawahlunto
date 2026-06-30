@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/dictionaries";
 import { kulinerData, kulinerReferensi } from "@/data/kuliner";
 import HeroBanner from "@/components/HeroBanner";
@@ -5,6 +6,22 @@ import CTAButton from "@/components/CTAButton";
 import SafeImage from "@/components/SafeImage";
 import FootnoteText from "@/components/FootnoteText";
 import ReferenceList from "@/components/ReferenceList";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === "id";
+  return {
+    title: isId ? "Kuliner Khas" : "Local Cuisine",
+    description: isId
+      ? "Cita rasa autentik kota tambang — kuliner khas Sawahlunto yang diwariskan turun-temurun."
+      : "Authentic flavors of a mining city — traditional Sawahlunto cuisine passed down through generations.",
+    alternates: { canonical: `https://sawahlunto.id/${locale}/kuliner` },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];

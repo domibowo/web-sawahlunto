@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getDictionary } from "@/dictionaries";
 import { sejarahData } from "@/data/sejarah";
@@ -5,6 +6,22 @@ import HeroBanner from "@/components/HeroBanner";
 import CTAButton from "@/components/CTAButton";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import Image from "next/image";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === "id";
+  return {
+    title: isId ? "Sejarah" : "History",
+    description: isId
+      ? "Perjalanan panjang Sawahlunto — dari penemuan batu bara 1867 hingga pengakuan Warisan Dunia UNESCO 2019."
+      : "Sawahlunto's long journey — from the 1867 coal discovery to UNESCO World Heritage recognition in 2019.",
+    alternates: { canonical: `https://sawahlunto.id/${locale}/sejarah` },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];

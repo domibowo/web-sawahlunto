@@ -23,11 +23,56 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Sawahlunto — Kota Warisan Dunia UNESCO",
-  description:
-    "Situs resmi wisata Kota Sawahlunto — dari kota tambang menuju kota wisata digital.",
-};
+const BASE_URL = "https://sawahlunto.id";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === "id";
+
+  const title = isId
+    ? "Sawahlunto — Kota Warisan Dunia UNESCO"
+    : "Sawahlunto — UNESCO World Heritage City";
+  const description = isId
+    ? "Situs resmi wisata Kota Sawahlunto — dari kota tambang menuju kota wisata digital. Warisan Dunia UNESCO sejak 2019."
+    : "Official tourism site of Sawahlunto — from coal mining city to digital tourism destination. UNESCO World Heritage since 2019.";
+
+  return {
+    metadataBase: new URL(BASE_URL),
+    title: {
+      default: title,
+      template: "%s | Sawahlunto",
+    },
+    description,
+    openGraph: {
+      siteName: "Sawahlunto",
+      locale: isId ? "id_ID" : "en_US",
+      alternateLocale: isId ? "en_US" : "id_ID",
+      type: "website",
+      url: `${BASE_URL}/${locale}`,
+      title,
+      description,
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Sawahlunto" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.jpg"],
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}`,
+      languages: {
+        "id": `${BASE_URL}/id`,
+        "en": `${BASE_URL}/en`,
+        "x-default": `${BASE_URL}/id`,
+      },
+    },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];

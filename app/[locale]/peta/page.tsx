@@ -1,7 +1,24 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/dictionaries";
 import HeroBanner from "@/components/HeroBanner";
 import CTAButton from "@/components/CTAButton";
 import PetaToggle from "@/components/PetaToggle";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === "id";
+  return {
+    title: isId ? "Peta Kota" : "City Map",
+    description: isId
+      ? "Peta interaktif Kota Sawahlunto — temukan terowongan tambang, museum, danau, dan destinasi wisata lainnya."
+      : "Interactive map of Sawahlunto — find mining tunnels, museums, lakes, and other tourist destinations.",
+    alternates: { canonical: `https://sawahlunto.id/${locale}/peta` },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];

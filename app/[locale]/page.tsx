@@ -1,7 +1,24 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/dictionaries";
 import HeroBanner from "@/components/HeroBanner";
 import NavCard from "@/components/NavCard";
 import CTAButton from "@/components/CTAButton";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === "id";
+  return {
+    title: isId ? "Beranda" : "Home",
+    description: isId
+      ? "Jelajahi sejarah, budaya, kuliner, dan destinasi wisata Kota Sawahlunto — Warisan Dunia UNESCO dari Sumatera Barat."
+      : "Explore the history, culture, cuisine, and tourist destinations of Sawahlunto — a UNESCO World Heritage city in West Sumatra.",
+    alternates: { canonical: `https://sawahlunto.id/${locale}` },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];

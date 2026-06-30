@@ -1,8 +1,25 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/dictionaries";
 import { wisataData } from "@/data/wisata";
 import HeroBanner from "@/components/HeroBanner";
 import CTAButton from "@/components/CTAButton";
 import SafeImage from "@/components/SafeImage";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === "id";
+  return {
+    title: isId ? "Destinasi Wisata" : "Tourist Destinations",
+    description: isId
+      ? "Terowongan tambang bawah tanah, museum bersejarah, danau bekas galian — destinasi wisata unik Kota Sawahlunto."
+      : "Underground mining tunnels, historic museums, and a stunning former excavation lake — unique tourist destinations in Sawahlunto.",
+    alternates: { canonical: `https://sawahlunto.id/${locale}/wisata` },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];
@@ -41,6 +58,11 @@ export default async function WisataPage({
 
               {/* Teks */}
               <div className="flex-1">
+                {item.statusBadge && (
+                  <span className="inline-block mb-3 px-2.5 py-1 rounded text-xs font-mono font-semibold uppercase tracking-wide bg-amber-100 text-amber-700 border border-amber-300">
+                    ⚠ {item.statusBadge[lang]}
+                  </span>
+                )}
                 <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-charcoal leading-snug mb-4">
                   {item.nama[lang]}
                 </h2>

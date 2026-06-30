@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/dictionaries";
 import { sejarahData, getSejarahBySlug, getAdjacentSejarah } from "@/data/sejarah";
@@ -7,6 +8,35 @@ import Breadcrumb from "@/components/Breadcrumb";
 import PrevNextNav from "@/components/PrevNextNav";
 import FootnoteText from "@/components/FootnoteText";
 import ReferenceList from "@/components/ReferenceList";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const item = getSejarahBySlug(slug);
+  if (!item) return {};
+  const lang = locale as "id" | "en";
+  const title = item.judul[lang];
+  const description = item.ringkasan[lang];
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: item.gambar ? [{ url: item.gambar, alt: title }] : [],
+    },
+    alternates: {
+      canonical: `https://sawahlunto.id/${locale}/sejarah/${slug}`,
+      languages: {
+        "id": `https://sawahlunto.id/id/sejarah/${slug}`,
+        "en": `https://sawahlunto.id/en/sejarah/${slug}`,
+      },
+    },
+  };
+}
 
 export function generateStaticParams() {
   return ["id", "en"].flatMap((locale) =>

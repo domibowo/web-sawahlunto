@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/dictionaries";
 import { inovasiData, inovasiDinamikaTambang, inovasiReferensi } from "@/data/inovasi";
 import HeroBanner from "@/components/HeroBanner";
@@ -5,6 +6,22 @@ import CTAButton from "@/components/CTAButton";
 import SafeImage from "@/components/SafeImage";
 import FootnoteText from "@/components/FootnoteText";
 import ReferenceList from "@/components/ReferenceList";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === "id";
+  return {
+    title: isId ? "Inovasi & Teknologi" : "Innovation & Technology",
+    description: isId
+      ? "Transformasi digital Sawahlunto — dari kota tambang yang nyaris mati menuju destinasi wisata bertaraf dunia."
+      : "Sawahlunto's digital transformation — from a near-ghost mining town to a world-class tourism destination.",
+    alternates: { canonical: `https://sawahlunto.id/${locale}/inovasi` },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];
