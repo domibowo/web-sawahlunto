@@ -58,7 +58,7 @@ jobs:
             docker rm kotague-container || true
 
             # 4. Run the new container
-            docker run -d \old
+            docker run -d \
               --name kotague-container \
               --restart unless-stopped \
               -p 127.0.0.1:3000:3000 \
