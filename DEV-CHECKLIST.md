@@ -7,7 +7,7 @@ Checklist teknis level kode: struktur file, komponen, tipe data, dan kebutuhan t
 - [ ] Tailwind: tambahkan token warna custom di `tailwind.config` — terracotta, cream, charcoal, teal (sebagai `theme.extend.colors`)
 - [ ] `next/font/google`: daftarkan font serif (judul) & sans-serif (isi), expose sebagai CSS variable + `fontFamily` Tailwind
 - [ ] Setup i18n routing `app/[locale]/...` (next-intl atau middleware custom), locale: `id`, `en`
-- [ ] Struktur folder data: `/data/*.ts` — satu file per section, isi field dwibahasa langsung di dalamnya (bukan file terpisah per locale)
+- [x] Struktur folder data: `/data/*.ts` — satu file per section, isi field dwibahasa langsung di dalamnya (bukan file terpisah per locale)
 
 ## 2. Tipe data (TypeScript)
 - [ ] `type Bilingual = { id: string; en: string }` — dipakai di semua field teks
