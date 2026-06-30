@@ -48,7 +48,7 @@ export default async function HomePage({
         size="lg"
         badge={home.badge}
         title={home.headline}
-        imageSrc="https://r2.kotague.id/Sawahlunto/13.jpg"
+        imageSrc="https://r2.kotague.id/Sawahlunto/13.webp"
       />
 
       {/* Intro + CTA */}
