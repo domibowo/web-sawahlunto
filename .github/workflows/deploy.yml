@@ -5,29 +5,64 @@ on:
     branches:
       - main
 
+env:
+  REGISTRY: ghcr.io
+  # IMPORTANT: GitHub usernames and repo names must be strictly lowercase here
+  IMAGE_NAME: ghcr.io/domibowo/web-sawahlunto
+
 jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ env.IMAGE_NAME }}:latest
   deploy:
+    needs: build-and-push
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository Code
-      uses: actions/checkout@v4
+      - name: Execute Remote SSH Commands
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+            # 1. Authenticate VPS to GHCR
+            echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-    - name: Execute Remote SSH Commands
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        password: ${{ secrets.SSH_PASSWORD }}
-        port: 22
-        script: |
-          cd /var/www/kotague
-          git pull origin main
-          docker build -t kotague-app .
-          docker stop kotague-container || true
-          docker rm kotague-container || true
-          docker run -d \
-            --name kotague-container \
-            --restart unless-stopped \
-            -p 127.0.0.1:3000:3000 \
-            kotague-app
+            # 2. Pull the newly built image
+            docker pull ${{ env.IMAGE_NAME }}:latest
+
+            # 3. Stop and remove the  container
+            docker stop kotague-container || true
+            docker rm kotague-container || true
+
+            # 4. Run the new container
+            docker run -d \old
+              --name kotague-container \
+              --restart unless-stopped \
+              -p 127.0.0.1:3000:3000 \
+              ${{ env.IMAGE_NAME }}:latest
+              
+            # 5. Clean up old dangling images to free up VPS disk space
+            docker image prune -f
