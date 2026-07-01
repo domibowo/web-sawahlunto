@@ -23,7 +23,7 @@ try {
 
 const SRC_DIR  = join(import.meta.dirname, "images-src");
 const OUT_DIR  = join(import.meta.dirname, "..", "dist", "r2-upload");
-const EXTS     = new Set([".jpg", ".jpeg", ".png", ".webp"]);
+const EXTS     = new Set([".webp", ".jpeg", ".png", ".webp"]);
 
 // Batas ukuran panjang sisi terbesar per kategori
 const HERO_MAX = 1600;

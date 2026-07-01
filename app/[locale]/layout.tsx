@@ -3,6 +3,7 @@ import { Lora, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import { getDictionary } from "@/dictionaries";
 
 const lora = Lora({
@@ -55,13 +56,13 @@ export async function generateMetadata({
       url: `${BASE_URL}/${locale}`,
       title,
       description,
-      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Sawahlunto" }],
+      images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Sawahlunto" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og-image.jpg"],
+      images: ["/og-image.webp"],
     },
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
@@ -97,6 +98,7 @@ export default async function LocaleLayout({
         <Navbar locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />
+        <ChatbotWidget locale={locale} lang={locale as "id" | "en"} />
       </body>
     </html>
   );

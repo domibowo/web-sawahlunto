@@ -43,7 +43,7 @@ export default async function SejarahPage({
         size="sm"
         title={s.heroTitle}
         subtitle={s.intro}
-        imageSrc="https://r2.kotague.id/Sawahlunto/2.jpg"
+        imageSrc="https://r2.kotague.id/Sawahlunto/2.webp"
       />
 
       {/* Timeline */}
