@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/dictionaries";
 import { wisataData, getWisataBySlug, getAdjacentWisata } from "@/data/wisata";
@@ -8,6 +9,35 @@ import Breadcrumb from "@/components/Breadcrumb";
 import PrevNextNav from "@/components/PrevNextNav";
 import FootnoteText from "@/components/FootnoteText";
 import ReferenceList from "@/components/ReferenceList";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const item = getWisataBySlug(slug);
+  if (!item) return {};
+  const lang = locale as "id" | "en";
+  const title = item.nama[lang];
+  const description = item.ringkasan[lang];
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: item.gambar ? [{ url: item.gambar, alt: title }] : [],
+    },
+    alternates: {
+      canonical: `https://sawahlunto.id/${locale}/wisata/${slug}`,
+      languages: {
+        "id": `https://sawahlunto.id/id/wisata/${slug}`,
+        "en": `https://sawahlunto.id/en/wisata/${slug}`,
+      },
+    },
+  };
+}
 
 export function generateStaticParams() {
   return ["id", "en"].flatMap((locale) =>
@@ -77,6 +107,21 @@ export default async function WisataDetailPage({
 
       {/* Konten */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        {/* Status badge */}
+        {item.statusBadge && (
+          <div className="mb-8 flex items-start gap-3 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3">
+            <span className="text-amber-600 text-lg leading-none mt-0.5" aria-hidden="true">⚠</span>
+            <div>
+              <span className="block font-mono text-xs font-semibold uppercase tracking-wide text-amber-700 mb-0.5">
+                {item.statusBadge[lang]}
+              </span>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                {item.infoPraktis?.jamBuka[lang]}
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Narasi detail */}
         <p className="text-charcoal text-base sm:text-lg leading-relaxed sm:leading-loose">
           <FootnoteText text={detail} scope={slug} />

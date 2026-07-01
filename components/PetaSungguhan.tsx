@@ -38,7 +38,7 @@ export default function PetaSungguhan({ locale, lang }: { locale: string; lang: 
             tiles: [`${origin}/maps/tiles/{z}/{x}/{y}.mvt`],
             minzoom: 0,
             maxzoom: 14,
-            bounds: [100.75, -0.71, 100.81, -0.62] as [number, number, number, number],
+            bounds: [100.74, -0.72, 100.81, -0.61] as [number, number, number, number],
             attribution: '© <a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
           },
         },

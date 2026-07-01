@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/dictionaries";
 import { budayaData, budayaReferensi } from "@/data/budaya";
 import HeroBanner from "@/components/HeroBanner";
@@ -5,6 +6,22 @@ import CTAButton from "@/components/CTAButton";
 import SafeImage from "@/components/SafeImage";
 import FootnoteText from "@/components/FootnoteText";
 import ReferenceList from "@/components/ReferenceList";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === "id";
+  return {
+    title: isId ? "Budaya & Tradisi" : "Culture & Traditions",
+    description: isId
+      ? "Seni, adat, dan festival Sawahlunto — warisan budaya lintas etnis dari era pertambangan kolonial."
+      : "Arts, customs, and festivals of Sawahlunto — a multi-ethnic cultural heritage from the colonial mining era.",
+    alternates: { canonical: `https://sawahlunto.id/${locale}/budaya` },
+  };
+}
 
 export function generateStaticParams() {
   return [{ locale: "id" }, { locale: "en" }];

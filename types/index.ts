@@ -27,6 +27,7 @@ export type WisataItem = {
     tips: Bilingual;
   };
   gambar: string;
+  statusBadge?: Bilingual;
 };
 
 export type NavItem = {
