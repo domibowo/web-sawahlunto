@@ -1,4 +1,5 @@
 import type { WisataItem, Reference } from "@/types";
+import { gambarWisata } from "@/data/gambar";
 
 export const wisataData: WisataItem[] = [
   {
@@ -29,7 +30,7 @@ export const wisataData: WisataItem[] = [
         en: "Wear closed-toe shoes and follow the guide's instructions throughout the tunnel.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["lubang-mbah-soero"],
   },
   {
     slug: "museum-goedang-ransoem",
@@ -59,7 +60,7 @@ export const wisataData: WisataItem[] = [
         en: "Located only about 200 metres from Lubang Mbah Soero — both sites can be visited together on foot.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["museum-goedang-ransoem"],
   },
   {
     slug: "museum-kereta-api",
@@ -89,7 +90,7 @@ export const wisataData: WisataItem[] = [
         en: "Check the city events calendar if you want to see Mak Itam in operation — usually only during special occasions.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["museum-kereta-api"],
   },
   {
     slug: "danau-biru",
@@ -119,7 +120,7 @@ export const wisataData: WisataItem[] = [
         en: "The road is rocky and challenging — a private vehicle or local ojek is safer. Bring your own supplies as facilities around the lake are still limited.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["danau-biru"],
   },
   {
     slug: "puncak-cemara",
@@ -149,7 +150,7 @@ export const wisataData: WisataItem[] = [
         en: "Arrive in the late afternoon for the best views at sunset as the city lights begin to glow. Bring a jacket as the air is quite cool.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["puncak-cemara"],
   },
   {
     slug: "silo",
@@ -179,7 +180,7 @@ export const wisataData: WisataItem[] = [
         en: "Arrive around 07:00, 13:00, or 16:00 to hear the historic siren sound.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["silo"],
   },
   {
     slug: "makam-belanda",
@@ -209,7 +210,7 @@ export const wisataData: WisataItem[] = [
         en: "Located in a hilly area with uneven terrain — wear comfortable footwear.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["makam-belanda"],
   },
   {
     slug: "museum-tambang-ombilin",
@@ -239,7 +240,7 @@ export const wisataData: WisataItem[] = [
         en: "Ask for a guide for detailed explanations and enquire about the short film screening schedule in the dedicated room.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["museum-tambang-ombilin"],
   },
   {
     slug: "puncak-polan",
@@ -269,7 +270,7 @@ export const wisataData: WisataItem[] = [
         en: "For paragliding, arrange in advance with providers at the location.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["puncak-polan"],
   },
   {
     slug: "desa-wisata-rantih",
@@ -299,7 +300,7 @@ export const wisataData: WisataItem[] = [
         en: "Bring your own vehicle as public transport is limited. Pack a change of clothes if you plan to get wet at the waterfall or river.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["desa-wisata-rantih"],
   },
   {
     slug: "gereja-santa-barbara",
@@ -329,7 +330,7 @@ export const wisataData: WisataItem[] = [
         en: "Respect the church as an active place of worship — dress modestly and do not disturb any ongoing services.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["gereja-santa-barbara"],
   },
   {
     slug: "hotel-ombilin-kota-tua",
@@ -359,7 +360,7 @@ export const wisataData: WisataItem[] = [
         en: "Explore the area around the hotel on foot to see other nearby heritage buildings.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["hotel-ombilin-kota-tua"],
   },
   {
     slug: "lubang-kalam",
@@ -389,7 +390,7 @@ export const wisataData: WisataItem[] = [
         en: "This tunnel is traversed by the Mak Itam heritage train on specific schedules — check Mak Itam's operating schedule before visiting for a chance to see it in action.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["lubang-kalam"],
   },
   {
     slug: "gedung-pusat-kebudayaan",
@@ -419,7 +420,7 @@ export const wisataData: WisataItem[] = [
         en: "Check the official social media of Sawahlunto City Government for the latest updates on reopening before visiting.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["gedung-pusat-kebudayaan"],
     statusBadge: {
       id: "Sedang Direvitalisasi",
       en: "Under Restoration",
@@ -453,7 +454,7 @@ export const wisataData: WisataItem[] = [
         en: "Dress modestly and ask the mosque management for permission if you wish to see the historic basement.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["masjid-nurul-islam"],
   },
   {
     slug: "batu-runciang",
@@ -483,7 +484,7 @@ export const wisataData: WisataItem[] = [
         en: "The terrain is steep and rocky — wear appropriate footwear and take care especially in wet conditions.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["batu-runciang"],
   },
   {
     slug: "taman-segitiga",
@@ -513,7 +514,7 @@ export const wisataData: WisataItem[] = [
         en: "Come in the late afternoon or evening to enjoy the lively atmosphere of locals gathering and street food vendors.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["taman-segitiga"],
   },
   {
     slug: "geosite-fosil-ikan-gurami",
@@ -543,7 +544,7 @@ export const wisataData: WisataItem[] = [
         en: "Ideal for students and geology enthusiasts — contact Sawahlunto's Disparpora office to arrange an organised educational visit.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["geosite-fosil-ikan-gurami"],
   },
   {
     slug: "padang-savana-kolok",
@@ -573,7 +574,7 @@ export const wisataData: WisataItem[] = [
         en: "The site is still quiet with very few food stalls nearby — bring your own food and drinks.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["padang-savana-kolok"],
   },
   {
     slug: "waterboom-muaro-kalaban",
@@ -603,7 +604,7 @@ export const wisataData: WisataItem[] = [
         en: "Contact management before visiting to confirm the current operational status of attractions.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["waterboom-muaro-kalaban"],
   },
   {
     slug: "kawasan-kandi",
@@ -633,7 +634,7 @@ export const wisataData: WisataItem[] = [
         en: "For camping, contact the local Tourism Office for reservations and the latest information on available facilities.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["kawasan-kandi"],
   },
   {
     slug: "kebun-buah-kandi",
@@ -663,7 +664,7 @@ export const wisataData: WisataItem[] = [
         en: "Visit during the fruit harvest season for the best pick-your-own experience.",
       },
     },
-    gambar: "",
+    gambar: gambarWisata["kebun-buah-kandi"],
   },
 ];
 

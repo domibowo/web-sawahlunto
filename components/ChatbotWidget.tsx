@@ -124,12 +124,6 @@ export default function ChatbotWidget({ lang }: Props) {
               >
                 {title}
               </span>
-              <span
-                className="text-[10px] px-1.5 py-0.5 rounded"
-                style={{ background: "#C1502E", color: "#F4ECDD", fontFamily: "var(--font-plus-jakarta, sans-serif)" }}
-              >
-                {isId ? "62 pertanyaan" : "62 questions"}
-              </span>
             </div>
             <button
               onClick={() => setIsOpen(false)}

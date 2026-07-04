@@ -42,7 +42,7 @@ export default async function InovasiPage({
       <HeroBanner size="sm" title={iv.heroTitle} subtitle={iv.intro} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex flex-col gap-16 sm:gap-20">
-        {/* 3 section utama */}
+        {/* 5 section utama */}
         {inovasiData.map((section, index) => {
           const isEven = index % 2 === 0;
           return (
