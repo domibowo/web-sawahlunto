@@ -16,10 +16,15 @@
   --font-mono: var(--font-jetbrains-mono);
 }
 
+html {
+  background-color: var(--color-charcoal);
+}
+
 body {
   background-color: var(--color-cream);
   color: var(--color-charcoal);
   font-family: var(--font-sans), system-ui, sans-serif;
+  overscroll-behavior: none;
 }
 
 h1, h2, h3, h4 {

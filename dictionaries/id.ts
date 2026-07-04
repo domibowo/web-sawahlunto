@@ -53,21 +53,18 @@ const id = {
     nextCulture: "Lanjut ke Budaya & Tradisi",
     prevEvent: "← Peristiwa sebelumnya",
     nextEvent: "Peristiwa selanjutnya →",
-    photoCredit: "Sumber: [diisi nanti]",
   },
   budaya: {
     heroTitle: "Budaya & Tradisi Sawahlunto",
     intro:
       "Dari rahim penderitaan para pekerja tambang lintas etnis, Sawahlunto mewarisi kekayaan budaya yang unik dan tak tertandingi — bahasa, tenun, dan perayaan yang menjadi penanda identitas kota.",
     nextKuliner: "Lanjut ke Kuliner Khas",
-    photoCredit: "Sumber: [diisi nanti]",
   },
   kuliner: {
     heroTitle: "Kuliner Khas Sawahlunto",
     intro:
       "Di balik setiap gigitan, ada cerita panjang tentang bumbu, bara api, dan tradisi yang diwariskan turun-temurun di kota tambang ini.",
     nextWisata: "Lanjut ke Destinasi Wisata",
-    photoCredit: "Sumber: [diisi nanti]",
   },
   inovasi: {
     heroTitle: "Inovasi & Teknologi Sawahlunto",
@@ -75,7 +72,6 @@ const id = {
       "Kota tambang yang bangkit bukan hanya lewat wisata, tapi juga lewat kreativitas warga, kolaborasi budaya, dan teknologi yang membawa Sawahlunto ke panggung dunia.",
     nextPeta: "Lanjut ke Peta Kota",
     disclaimerTambang: "Berdasarkan pemberitaan terkini — perkembangan masih berlangsung.",
-    photoCredit: "Sumber: [diisi nanti]",
   },
   wisata: {
     heroTitle: "Destinasi Wisata Sawahlunto",
@@ -93,7 +89,6 @@ const id = {
     hargaTiketLabel: "Harga Tiket",
     tipsLabel: "Tips Berkunjung",
     disclaimer: "Harga & jam operasional dapat berubah, mohon konfirmasi sebelum berkunjung.",
-    photoCredit: "Sumber: [diisi nanti]",
   },
   peta: {
     heroTitle: "Peta Kota Sawahlunto",

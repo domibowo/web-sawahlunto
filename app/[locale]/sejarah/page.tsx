@@ -121,6 +121,7 @@ export default async function SejarahPage({
                             src={item.gambar}
                             alt={item.judul[lang]}
                             fill
+                            sizes="(max-width: 640px) 100vw, 320px"
                             className="object-cover transition-transform duration-500 ease-in-out hover:scale-125"
                             priority
                           />
@@ -154,6 +155,7 @@ export default async function SejarahPage({
                             src={item.gambar}
                             alt={item.judul[lang]}
                             fill
+                            sizes="(max-width: 640px) 100vw, 320px"
                             className="object-cover transition-transform duration-500 ease-in-out hover:scale-125"
                             priority
                           />

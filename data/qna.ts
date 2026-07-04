@@ -23,7 +23,7 @@ export const qnaData: QnAItem[] = [
       en: "On 1 December 1888, the Dutch colonial government established the administrative boundaries of the Afdeeling capital in the Ombilin valley. This date is now commemorated as Sawahlunto's City Anniversary.",
     },
     section: "sejarah",
-    followUp: ["s2", "s3"],
+    followUp: ["s2", "s3", "s9"],
   },
   {
     id: "s2",
@@ -123,6 +123,20 @@ export const qnaData: QnAItem[] = [
     section: "sejarah",
     followUp: ["w8", "w7"],
   },
+  {
+    id: "s9",
+    pertanyaan: {
+      id: "Kapan Sawahlunto resmi berdiri sebagai kota?",
+      en: "When was Sawahlunto officially established as a city?",
+    },
+    keywords: ["berdiri","didirikan","1888","1 desember","hari jadi","anniversary","kota","established","founded"],
+    jawaban: {
+      id: "Pada 1 Desember 1888, pemerintah Hindia Belanda menetapkan batas-batas wilayah ibu kota Afdeeling di kawasan Ombilin — tanggal yang kini diperingati sebagai Hari Jadi Kota Sawahlunto setiap tahunnya, biasanya dimeriahkan dengan tradisi Makan Bajamba bersama.",
+      en: "On 1 December 1888, the Dutch colonial government established the administrative boundaries of the Afdeeling capital in the Ombilin area — a date now commemorated annually as Sawahlunto's City Anniversary, usually celebrated with the communal Makan Bajamba feast.",
+    },
+    section: "sejarah",
+    followUp: ["s1", "b2"],
+  },
 
   // ── BUDAYA ───────────────────────────────────────────────────────────────
   {
@@ -151,7 +165,7 @@ export const qnaData: QnAItem[] = [
       en: "Makan Bajamba is a communal feast tradition celebrated every 1 December (Sawahlunto City Anniversary). Thousands of residents sit in long rows wearing traditional attire to eat together.",
     },
     section: "budaya",
-    followUp: ["b1"],
+    followUp: ["b1", "s9"],
   },
   {
     id: "b3",
@@ -223,7 +237,7 @@ export const qnaData: QnAItem[] = [
       en: "Must-try local specialties: Dendeng Batokok, Kopi Datuk Silungkang, Sup Silungkang, and Kerupuk Ubi Silungkang to take home.",
     },
     section: "kuliner",
-    followUp: ["k2", "k3", "k4"],
+    followUp: ["k2", "k3", "k4", "k7", "k8", "k9", "k10"],
   },
   {
     id: "k2",
@@ -294,6 +308,62 @@ export const qnaData: QnAItem[] = [
     },
     section: "kuliner",
     followUp: ["k1"],
+  },
+  {
+    id: "k7",
+    pertanyaan: {
+      id: "Apa itu Pical?",
+      en: "What is Pical?",
+    },
+    keywords: ["pical","mie","noodle","kacang","peanut","gado-gado","mbah soero"],
+    jawaban: {
+      id: "Pical adalah hidangan mie kuning pipih dengan tahu, kol, dan sayur hijau yang disiram kuah kacang khas Sawahlunto — sekilas mirip gado-gado tapi rasanya berbeda. \"Pical Mbah Soero\" di Kelurahan Tanah Lapang adalah salah satu tempat paling dikenal untuk menikmatinya.",
+      en: "Pical is a dish of flat yellow noodles with tofu, cabbage, and greens in a distinctive Sawahlunto peanut sauce — similar to gado-gado at a glance but with a different flavour. \"Pical Mbah Soero\" in Kelurahan Tanah Lapang is one of the most well-known places to enjoy it.",
+    },
+    section: "kuliner",
+    followUp: ["k1", "k2"],
+  },
+  {
+    id: "k8",
+    pertanyaan: {
+      id: "Apa itu Ale-ale Silungkang?",
+      en: "What is Ale-ale Silungkang?",
+    },
+    keywords: ["ale-ale","silungkang","kue","cake","serabi","pandan","tradisional"],
+    jawaban: {
+      id: "Ale-ale Silungkang adalah kue tradisional dari Nagari Silungkang Duo yang membutuhkan waktu 6-7 jam untuk membuatnya. Berbahan beras, gula Jawa, air kelapa, dan pandan — teksturnya kenyal di dalam, sedikit garing di luar. Sekilas mirip serabi tapi karakter rasanya benar-benar berbeda.",
+      en: "Ale-ale Silungkang is a traditional cake from Nagari Silungkang Duo that takes 6-7 hours to make. Made from rice, palm sugar, coconut water, and pandan — chewy inside, slightly crisp outside. It resembles serabi at first glance but has a distinctly different flavour.",
+    },
+    section: "kuliner",
+    followUp: ["k1", "k4"],
+  },
+  {
+    id: "k9",
+    pertanyaan: {
+      id: "Apa itu Lamang Tungkek?",
+      en: "What is Lamang Tungkek?",
+    },
+    keywords: ["lamang","tungkek","talawi","daun pisang","banana leaf","idul adha","eid","santan","coconut"],
+    jawaban: {
+      id: "Lamang Tungkek adalah makanan khas Kecamatan Talawi berbahan tepung beras, santan, dan gula aren yang dibungkus daun pisang. Paling mudah ditemukan saat Idul Adha tapi sebenarnya bisa dinikmati kapan saja — seperti opor ayam yang identik dengan lebaran tapi tidak eksklusif hanya tersedia saat itu. Tanyakan ke warga Talawi untuk pesanan di luar musim.",
+      en: "Lamang Tungkek is a speciality of Kecamatan Talawi made from rice flour, coconut milk, and palm sugar wrapped in banana leaves. Most commonly found during Eid al-Adha but available any time — much like ketupat which is associated with Eid but not exclusively so. Ask Talawi locals for orders outside the season.",
+    },
+    section: "kuliner",
+    followUp: ["k1", "k4"],
+  },
+  {
+    id: "k10",
+    pertanyaan: {
+      id: "Apa itu Kue Pinyaram?",
+      en: "What is Kue Pinyaram?",
+    },
+    keywords: ["pinyaram","kue","cake","tepung beras","oleh-oleh","souvenir","minangkabau","goreng","fried"],
+    jawaban: {
+      id: "Kue Pinyaram adalah kue tradisional Minangkabau yang bisa ditemukan di Sawahlunto — bulat gepeng dari tepung beras, gula aren, dan santan yang digoreng hingga tepinya garing dan tengahnya padat. Tersedia dua varian: pinyaram hitam (gula aren, rasa lebih kaya) dan pinyaram putih (gula pasir, lebih ringan). Tahan 4-7 hari, cocok sebagai oleh-oleh.",
+      en: "Kue Pinyaram is a traditional Minangkabau cake found in Sawahlunto — flat and round, made from rice flour, palm sugar, and coconut milk, fried until the edges are crisp and the centre is firm. Available in two variants: black pinyaram (palm sugar, richer flavour) and white pinyaram (regular sugar, lighter taste). Keeps for 4-7 days, ideal as a souvenir.",
+    },
+    section: "kuliner",
+    followUp: ["k1", "k4"],
   },
 
   // ── WISATA ───────────────────────────────────────────────────────────────
@@ -501,8 +571,8 @@ export const qnaData: QnAItem[] = [
     },
     keywords: ["gpk","gluck auf","pusat kebudayaan","cultural","buka","open","revitalisasi"],
     jawaban: {
-      id: "Saat ini sedang direvitalisasi (mulai Februari 2026, target selesai 12 Agustus 2026). Belum bisa dikunjungi seperti biasa — pantau informasi terbaru via media sosial Pemko Sawahlunto.",
-      en: "Currently under revitalisation (started February 2026, expected completion 12 August 2026). Not open for regular visits — follow Sawahlunto City's social media for the latest updates.",
+      id: "Saat ini sedang direvitalisasi sejak 13 Februari 2026, dengan target selesai 12 Agustus 2026. Belum bisa dikunjungi seperti biasa — pantau media sosial Pemko Sawahlunto untuk info pembukaan kembali.",
+      en: "Currently under revitalisation since 13 February 2026, with a target completion date of 12 August 2026. Not open for regular visits — follow Sawahlunto City's social media for reopening updates.",
     },
     section: "wisata",
     followUp: ["w1"],
@@ -535,7 +605,7 @@ export const qnaData: QnAItem[] = [
       en: "UNESCO recognised it under two criteria: (ii) as evidence of the exchange of mining technology between Europe and Asia, and (iv) as an outstanding example of the integration of industrial technology with local wisdom in human history.",
     },
     section: "inovasi",
-    followUp: ["s4", "i2"],
+    followUp: ["s4", "i2", "i7", "i8"],
   },
   {
     id: "i2",
@@ -715,8 +785,8 @@ export const qnaData: QnAItem[] = [
     },
     keywords: ["rantih","desa wisata","air terjun","waterfall","bikan","tibarau","camping","trekking","tubing"],
     jawaban: {
-      id: "Sekitar 12 km dari pusat kota, Desa Wisata Rantih menawarkan alam pedesaan asri: dua air terjun (Bikan dan Tibarau), rumah pohon, area camping, jalur trekking hutan, dan susur sungai dengan tubing di Sungai Ombilin. Dikelola oleh Kelompok Sadar Wisata Rantih bersama warga — paket makan juga tersedia melalui lembaga wisata desa.",
-      en: "About 12 km from the city centre, Desa Wisata Rantih offers unspoilt rural scenery: two waterfalls (Bikan and Tibarau), a treehouse, camping area, forest trekking trails, and river tubing along the Ombilin River. Managed by the Rantih Tourism Awareness Group — meal packages are also available through the village tourism body.",
+      id: "Sekitar 12 km dari pusat kota, Desa Wisata Rantih menawarkan alam pedesaan asri: dua air terjun (Bikan dan Tibarau), rumah pohon, area camping, jalur trekking hutan, dan susur sungai dengan tubing di Sungai Ombilin. Dikelola oleh Kelompok Sadar Wisata Rantih — paket makan juga tersedia.",
+      en: "About 12 km from the city centre, Desa Wisata Rantih offers unspoilt rural scenery: two waterfalls (Bikan and Tibarau), a treehouse, camping area, forest trekking trails, and river tubing along the Ombilin River. Managed by the Rantih Tourism Awareness Group — meal packages also available.",
     },
     section: "wisata",
     followUp: ["w14", "w23"],
@@ -803,7 +873,7 @@ export const qnaData: QnAItem[] = [
       en: "The Kandi area is a former open-cast mine now transformed into a nature recreation destination: a camping ground with cottages, Danau Kandi for fishing and boating, and lakeside gazebos for relaxation. Meer Von Kandi Heritage here also provides various water rides and family recreation facilities.",
     },
     section: "wisata",
-    followUp: ["w29", "w12"],
+    followUp: ["w29", "w12", "i7"],
   },
   {
     id: "w29",
@@ -892,5 +962,33 @@ export const qnaData: QnAItem[] = [
     },
     section: "inovasi",
     followUp: ["i3", "s4"],
+  },
+  {
+    id: "i7",
+    pertanyaan: {
+      id: "Apa itu program Just Not Green?",
+      en: "What is the Just Not Green programme?",
+    },
+    keywords: ["just not green","kandi","tambang","bekas","lahan","program","inovasi","2014","bukit asam"],
+    jawaban: {
+      id: "Just Not Green adalah program inovasi Pemerintah Kota Sawahlunto yang mengubah 363,4 hektare bekas lahan tambang terbuka di kawasan Kandi dan Tanah Hitam (diserahkan PT Bukit Asam pada 2014) menjadi destinasi wisata produktif. Dari program inilah lahir Taman Wisata Kandi, Kebun Buah Kandi, Camping Ground, dan Arena Road Race. Pada 2017, Kemendagri menominasikannya untuk penghargaan inovasi nasional.",
+      en: "Just Not Green is a Sawahlunto City Government innovation programme that transformed 363.4 hectares of former open-cast mine land in the Kandi and Tanah Hitam areas (handed over by PT Bukit Asam in 2014) into productive tourism destinations. From this programme came Taman Wisata Kandi, Kebun Buah Kandi, a camping ground, and a race track. In 2017, the Ministry of Home Affairs nominated it for a national innovation award.",
+    },
+    section: "inovasi",
+    followUp: ["i1", "w28"],
+  },
+  {
+    id: "i8",
+    pertanyaan: {
+      id: "Apa itu Gerakan Menuju 100 Smart City di Sawahlunto?",
+      en: "What is the 100 Smart Cities Movement in Sawahlunto?",
+    },
+    keywords: ["smart city","100","kominfo","masterplan","UNAND","andalas","digital","2023","teknologi"],
+    jawaban: {
+      id: "Pada 2023, Sawahlunto terpilih dalam Gerakan Menuju 100 Smart City dari Kementerian Kominfo RI — program nasional yang mendampingi kota-kota menyusun Masterplan Smart City. Di Sawahlunto, program ini didukung pakar dari Universitas Andalas (UNAND). Visi yang diusung: meningkatkan kualitas pelayanan publik berbasis teknologi dengan pendekatan governance berbasis kearifan lokal.",
+      en: "In 2023, Sawahlunto was selected for the Ministry of Communication and Information Technology's 100 Smart Cities Movement — a national programme guiding cities in developing Smart City Master Plans. In Sawahlunto, the programme is supported by experts from Universitas Andalas (UNAND). The vision: improving technology-based public services through a governance approach grounded in local wisdom.",
+    },
+    section: "inovasi",
+    followUp: ["i1", "i5"],
   },
 ];

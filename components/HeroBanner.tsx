@@ -33,9 +33,9 @@ export default function HeroBanner({
         <Image
           src={imageSrc}
           alt={imageAlt ?? title}
-          width={5}
-          height={0}
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
           priority
         />
       )}
