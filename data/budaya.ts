@@ -1,4 +1,5 @@
 import type { Bilingual, Reference } from "@/types";
+import { gambarBudaya } from "@/data/gambar";
 
 export type BudayaSection = {
   id: string;
@@ -18,7 +19,7 @@ export const budayaData: BudayaSection[] = [
       id: "Pekerja tambang dulu didatangkan dari berbagai daerah: Jawa, Minangkabau, Tionghoa, Batak, hingga Bugis.[1] Tanpa disangka, percampuran ini melahirkan semacam Indonesia mini di lembah kecil Sumatera Barat. Keturunan para pekerja ini bahkan punya bahasa sendiri, Bahasa Tansi — gabungan unsur Minangkabau, Jawa, Tionghoa, dan Melayu yang hanya bisa ditemukan di Sawahlunto.[2]",
       en: "Mine workers were brought from various regions: Java, Minangkabau, Chinese, Batak, and Bugis.[1] Unexpectedly, this mixing gave rise to a kind of mini-Indonesia in a small valley in West Sumatra. The descendants of these workers even have their own language, Bahasa Tansi — a blend of Minangkabau, Javanese, Chinese, and Malay elements found only in Sawahlunto.[2]",
     },
-    gambar: "",
+    gambar: gambarBudaya["bahasa-tansi"],
   },
   {
     id: "makan-bajamba",
@@ -30,7 +31,7 @@ export const budayaData: BudayaSection[] = [
       id: "Keberagaman ini dirayakan setiap 1 Desember lewat tradisi Makan Bajamba, bertepatan dengan hari jadi kota.[3] Ribuan warga duduk berderet panjang mengenakan pakaian adat warna-warni, makan bersama dalam satu meja panjang. Sebuah perayaan sederhana, tapi maknanya dalam: dari masa lalu yang berat, kini tumbuh kebersamaan.",
       en: "This diversity is celebrated every December 1st through the Makan Bajamba tradition, coinciding with the city's anniversary.[3] Thousands of residents sit in long rows wearing colorful traditional attire, sharing a meal at one long table. A simple celebration, but deeply meaningful: from a difficult past, togetherness now flourishes.",
     },
-    gambar: "",
+    gambar: gambarBudaya["makan-bajamba"],
   },
   {
     id: "songket-silungkang",
@@ -42,7 +43,7 @@ export const budayaData: BudayaSection[] = [
       id: "Di Nagari Silungkang, salah satu kawasan di Sawahlunto, songket telah ditenun turun-temurun — salah satu yang tertua di Indonesia.[4] Pengrajin menggunakan alat tenun bukan mesin yang disebut palanta, memadukan benang katun dengan kilau emas, perak, atau tembaga. Prosesnya panjang, dikenal sebagai 5M: mancolok, manuriang, mahani, maharok, dan mananun. Pada 2019, kerajinan ini resmi diakui sebagai Warisan Budaya Tak Benda Indonesia.[4]",
       en: "In Nagari Silungkang, one of Sawahlunto's districts, songket has been woven for generations — one of the oldest in Indonesia.[4] Craftspeople use a traditional handloom called palanta, blending cotton threads with the shimmer of gold, silver, or copper. The process is lengthy, known as 5M: mancolok, manuriang, mahani, maharok, and mananun. In 2019, this craft was officially recognized as Indonesia's Intangible Cultural Heritage.[4]",
     },
-    gambar: "",
+    gambar: gambarBudaya["songket-silungkang"],
   },
   {
     id: "sissca",
@@ -54,7 +55,7 @@ export const budayaData: BudayaSection[] = [
       id: "Warisan tenun ini terus dirayakan lewat Sawahlunto International Songket Silungkang Carnival (SISSCa), karnaval tahunan yang digelar setiap 7 September bertepatan dengan Hari Tenun Nasional.[5] Sekitar 60 persen kostum yang dipakai dalam pawai ini terbuat dari songket asli, memadukan tenun tradisional dengan sentuhan desain modern.[5]",
       en: "This weaving heritage is continually celebrated through the Sawahlunto International Songket Silungkang Carnival (SISSCa), an annual carnival held every September 7th coinciding with National Weaving Day.[5] Around 60 percent of the costumes worn in the parade are made from authentic songket, blending traditional weaving with modern design touches.[5]",
     },
-    gambar: "",
+    gambar: gambarBudaya["sissca"],
   },
 ];
 

@@ -79,8 +79,8 @@ const LABEL_POS: Record<string, LabelPos> = {
   "silo":                        { x:  14, y: 0,  anchor: "start", line1dy: -4,  line2dy: 9  },
   "taman-segitiga":              { x: -14, y: 0,  anchor: "end",   line1dy: -10, line2dy: 11 },
   "hotel-ombilin-kota-tua":      { x: -14, y: 0,  anchor: "end",   line1dy: -10, line2dy: 11 },
-  "gereja-santa-barbara":        { x:  14, y: 0,  anchor: "start", line1dy: -10, line2dy: 11 },
-  "masjid-nurul-islam":          { x:  14, y: 0,  anchor: "start", line1dy: -10, line2dy: 11 },
+  "gereja-santa-barbara":        { x: -14, y: 0,  anchor: "end",   line1dy: -10, line2dy: 11 },
+  "masjid-nurul-islam":          { x:  10, y: 14, anchor: "start",  line1dy: 4,  line2dy: 11 },
   "gedung-pusat-kebudayaan":     { x:   0, y: 14, anchor: "middle",line1dy: 4,   line2dy: 11 },
   // ── barat / selatan ──
   "makam-belanda":               { x:  14, y: 0,  anchor: "start", line1dy: -10, line2dy: 11 },
@@ -88,10 +88,10 @@ const LABEL_POS: Record<string, LabelPos> = {
   "desa-wisata-rantih":          { x:  14, y: 0,  anchor: "start", line1dy: -10, line2dy: 11 },
   // ── jalur tengah ──
   "lubang-kalam":                { x:  14, y: 0,  anchor: "start", line1dy: -10, line2dy: 11 },
-  "waterboom-muaro-kalaban":     { x:  14, y: 0,  anchor: "start", line1dy: -10, line2dy: 11 },
+  "waterboom-muaro-kalaban":     { x: -14, y: 0,  anchor: "end",   line1dy: -10, line2dy: 11 },
   // ── dataran tinggi ──
-  "puncak-cemara":               { x:  14, y: 0,  anchor: "start", line1dy: -6,  line2dy: 7  },
-  "puncak-polan":                { x:  14, y: 0,  anchor: "start", line1dy: -10, line2dy: 11 },
+  "puncak-cemara":               { x: -14, y: 0,  anchor: "end",   line1dy: -6,  line2dy: 7  },
+  "puncak-polan":                { x:   0, y: 14, anchor: "middle", line1dy: 4,  line2dy: 11 },
   // ── talawi / kandi ──
   "danau-biru":                  { x:  14, y: 0,  anchor: "start", line1dy: 4,   line2dy: 14 },
   "geosite-fosil-ikan-gurami":   { x: -14, y: 0,  anchor: "end",   line1dy: -10, line2dy: 11 },

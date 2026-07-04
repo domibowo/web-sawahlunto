@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ImagePlaceholder from "./ImagePlaceholder";
 
 interface HeroBannerProps {
   size?: "lg" | "sm";
@@ -25,7 +24,12 @@ export default function HeroBanner({
 }: HeroBannerProps) {
   return (
     <section className={`relative overflow-hidden ${heightMap[size]}`}>
-      {imageSrc ? (
+      {/* Base bg — visible sebelum gambar siap / saat tidak ada gambar */}
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(160deg, #3a2e2a 0%, #2B2420 100%)" }}
+      />
+      {imageSrc && (
         <Image
           src={imageSrc}
           alt={imageAlt ?? title}
@@ -34,8 +38,6 @@ export default function HeroBanner({
           className="absolute inset-0 w-full h-full object-cover"
           priority
         />
-      ) : (
-        <div className="absolute inset-0 bg-charcoal" />
       )}
 
       {/* Content */}
