@@ -310,7 +310,7 @@ export default function ChatbotWidget({ lang }: Props) {
           height: "52px",
           borderRadius: "50%",
           background: "#C1502E",
-          boxShadow: "0 4px 16px rgba(193,80,46,0.40)",
+          boxShadow: "0 4px 20px rgba(0,0,0,0.35), 0 0 0 3px #F4ECDD",
           color: "#F4ECDD",
         }}
       >

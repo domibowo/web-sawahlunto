@@ -14,12 +14,25 @@ interface NavbarProps {
 
 export default function Navbar({ locale, dict }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { nav } = dict;
 
   // Tutup drawer setiap kali pathname berubah (navigasi selesai)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(() => { setMenuOpen(false); }, [pathname]);
+
+  React.useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > 40) setScrolled(true);
+      else setScrolled(false);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const navLinks = [
     { label: nav.sejarah, href: `/${locale}/sejarah` },
@@ -33,7 +46,11 @@ export default function Navbar({ locale, dict }: NavbarProps) {
   const isActive = (href: string) => pathname.startsWith(href);
 
   return (
-    <header className="bg-charcoal text-cream sticky top-0 z-50 will-change-transform">
+    <header className={`text-cream sticky top-0 z-50 will-change-transform transition-all duration-300 ${
+      scrolled
+        ? "bg-charcoal/80 backdrop-blur-md border-b border-cream/10"
+        : "bg-charcoal"
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
@@ -88,7 +105,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <div className="border-t border-cream/10 bg-charcoal">
+        <div className={`border-t border-cream/10 ${scrolled ? "bg-charcoal/90 backdrop-blur-md" : "bg-charcoal"}`}>
           <nav className="max-w-7xl mx-auto px-4 py-2 flex flex-col gap-0.5" aria-label="Menu mobile">
             {navLinks.map((link) => (
               <Link

@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 
+const securityHeaders = [
+  { key: "X-Frame-Options",        value: "DENY" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy",        value: "strict-origin-when-cross-origin" },
+  { key: "Permissions-Policy",     value: "camera=(), microphone=(), geolocation=()" },
+];
+
 const nextConfig: NextConfig = {
-  output: 'standalone', 
-  trailingSlash: true,
-  images: { 
-    unoptimized: true,
+  output: 'standalone',
+  images: {
     remotePatterns: [
       {
         protocol: 'https',
@@ -13,7 +18,10 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  allowedDevOrigins: ["192.168.1.14"]
+  allowedDevOrigins: ["192.168.1.14"],
+  async headers() {
+    return [{ source: "/(.*)", headers: securityHeaders }];
+  },
 };
 
 export default nextConfig;

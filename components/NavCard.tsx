@@ -35,9 +35,9 @@ export default function NavCard({ href, icon, label, desc, color = "terracotta" 
         </svg>
       </div>
       <div>
-        <h3 className="font-sans font-medium text-cream text-sm sm:text-base leading-snug">
+        <p className="font-sans font-medium text-cream text-sm sm:text-base leading-snug">
           {label}
-        </h3>
+        </p>
         <p className="text-cream/55 text-xs sm:text-sm leading-relaxed mt-1 line-clamp-2">
           {desc}
         </p>

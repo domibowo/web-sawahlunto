@@ -7,8 +7,8 @@ const CACHE_NAME = "sawahlunto-v1";
 // Aset inti yang di-pre-cache saat install (shell PWA)
 const PRECACHE_URLS = [
   "/",
-  "/id/",
-  "/en/",
+  "/id",
+  "/en",
   "/offline.html",
   // Aset peta (sprite kecil, ~50KB) di-precache supaya peta sungguhan tidak blank saat pertama offline
   "/maps/sprites/light.json",

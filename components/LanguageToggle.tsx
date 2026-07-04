@@ -22,10 +22,12 @@ export default function LanguageToggle({ locale, className = "" }: LanguageToggl
   return (
     <Link
       href={otherPath}
-      className={`text-xs font-semibold px-2.5 py-1.5 rounded border border-teal text-teal hover:bg-teal hover:text-cream transition-colors min-h-9 inline-flex items-center ${className}`}
-      aria-label={`Ganti ke bahasa ${otherLocale === "id" ? "Indonesia" : "Inggris"}`}
+      className={`text-xs font-semibold px-2.5 py-1.5 rounded border border-cream/40 text-cream/80 hover:bg-teal hover:text-cream hover:border-teal transition-colors min-h-9 inline-flex items-center ${className}`}
     >
       {otherLocale.toUpperCase()}
+      <span className="sr-only">
+        {otherLocale === "id" ? " — Bahasa Indonesia" : " — English"}
+      </span>
     </Link>
   );
 }
