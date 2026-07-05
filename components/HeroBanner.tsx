@@ -7,6 +7,7 @@ interface HeroBannerProps {
   subtitle?: string;
   imageSrc?: string;
   imageAlt?: string;
+  imageCredit?: string;
 }
 
 const heightMap = {
@@ -21,6 +22,7 @@ export default function HeroBanner({
   subtitle,
   imageSrc,
   imageAlt,
+  imageCredit,
 }: HeroBannerProps) {
   return (
     <section className={`relative overflow-hidden ${heightMap[size]}`}>
@@ -66,6 +68,11 @@ export default function HeroBanner({
           </p>
         )}
       </div>
+      {imageCredit && (
+        <p className="absolute bottom-2 right-3 text-[10px] text-cream/40 italic leading-none">
+          {imageCredit}
+        </p>
+      )}
     </section>
   );
 }

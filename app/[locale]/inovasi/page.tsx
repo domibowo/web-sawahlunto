@@ -52,8 +52,9 @@ export default async function InovasiPage({
             >
               <div className="w-full md:w-2/5 shrink-0">
                 <SafeImage
-                  src={section.gambar}
+                  src={section.gambar.src}
                   alt={section.judul[lang]}
+                  credit={section.gambar.credit}
                   className="w-full aspect-video"
                 />
               </div>
@@ -74,8 +75,9 @@ export default async function InovasiPage({
         <section className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
           <div className="w-full md:w-2/5 shrink-0">
             <SafeImage
-              src={inovasiDinamikaTambang.gambar}
+              src={inovasiDinamikaTambang.gambar.src}
               alt={inovasiDinamikaTambang.judul[lang]}
+              credit={inovasiDinamikaTambang.gambar.credit}
               className="w-full aspect-video"
             />
           </div>

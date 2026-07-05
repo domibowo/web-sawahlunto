@@ -1,74 +1,76 @@
 /**
  * Registry gambar terpusat.
  * Setiap key sesuai dengan `slug` atau `id` item di data file masing-masing.
- * String kosong "" = belum tersedia (placeholder).
- * Isi dengan path lokal (/images/...) atau URL eksternal.
+ * src kosong "" = belum tersedia (placeholder).
+ * credit = sumber/kredit foto (opsional, ditampilkan sebagai caption).
  */
 
+import type { GambarEntry } from "@/types";
+
 // ── Sejarah ──────────────────────────────────────────────────────────────────
-export const gambarSejarah: Record<string, string> = {
-  "penemuan-batu-bara":         "https://r2.kotague.id/Sawahlunto/9.webp",
-  "kota-didirikan":             "https://r2.kotague.id/Sawahlunto/19.webp",
-  "tambang-dibuka":             "https://r2.kotague.id/Sawahlunto/19.webp",
-  "jalur-kereta":               "https://r2.kotague.id/Sawahlunto/collectie_tropenmuseum.webp",
-  "orang-rantai":               "https://r2.kotague.id/Sawahlunto/15.webp",
-  "puncak-kejayaan":            "https://r2.kotague.id/Sawahlunto/collectie_tropenmuseum_ombilin_steenkoolmijnen.webp",
-  "kota-nyaris-mati":           "https://r2.kotague.id/Sawahlunto/10.webp",
-  "warisan-dunia-unesco":       "https://r2.kotague.id/Sawahlunto/whcunescoorg.webp",
+export const gambarSejarah: Record<string, GambarEntry> = {
+  "penemuan-batu-bara":   { src: "https://r2.kotague.id/Sawahlunto/9.webp" },
+  "kota-didirikan":       { src: "https://r2.kotague.id/Sawahlunto/19.webp" },
+  "tambang-dibuka":       { src: "https://r2.kotague.id/Sawahlunto/19.webp" },
+  "jalur-kereta":         { src: "https://r2.kotague.id/Sawahlunto/collectie_tropenmuseum.webp", credit: "Collectie Tropenmuseum / Wikimedia Commons" },
+  "orang-rantai":         { src: "https://r2.kotague.id/Sawahlunto/15.webp" },
+  "puncak-kejayaan":      { src: "https://r2.kotague.id/Sawahlunto/collectie_tropenmuseum_ombilin_steenkoolmijnen.webp", credit: "Collectie Tropenmuseum / Wikimedia Commons" },
+  "kota-nyaris-mati":     { src: "https://r2.kotague.id/Sawahlunto/10.webp" },
+  "warisan-dunia-unesco": { src: "https://r2.kotague.id/Sawahlunto/whcunescoorg.webp", credit: "UNESCO World Heritage Centre" },
 };
 
 // ── Wisata ───────────────────────────────────────────────────────────────────
-export const gambarWisata: Record<string, string> = {
-  "lubang-mbah-soero":          "",
-  "museum-goedang-ransoem":     "",
-  "museum-kereta-api":          "",
-  "danau-biru":                 "",
-  "puncak-cemara":              "",
-  "silo":                       "",
-  "makam-belanda":              "",
-  "museum-tambang-ombilin":     "",
-  "puncak-polan":               "",
-  "desa-wisata-rantih":         "",
-  "gereja-santa-barbara":       "",
-  "hotel-ombilin-kota-tua":     "",
-  "lubang-kalam":               "",
-  "gedung-pusat-kebudayaan":    "",
-  "masjid-nurul-islam":         "",
-  "batu-runciang":              "",
-  "taman-segitiga":             "",
-  "geosite-fosil-ikan-gurami":  "",
-  "padang-savana-kolok":        "",
-  "waterboom-muaro-kalaban":    "",
-  "kawasan-kandi":              "",
-  "kebun-buah-kandi":           "",
+export const gambarWisata: Record<string, GambarEntry> = {
+  "lubang-mbah-soero":          { src: "" },
+  "museum-goedang-ransoem":     { src: "" },
+  "museum-kereta-api":          { src: "" },
+  "danau-biru":                 { src: "" },
+  "puncak-cemara":              { src: "" },
+  "silo":                       { src: "" },
+  "makam-belanda":              { src: "" },
+  "museum-tambang-ombilin":     { src: "" },
+  "puncak-polan":               { src: "" },
+  "desa-wisata-rantih":         { src: "" },
+  "gereja-santa-barbara":       { src: "" },
+  "hotel-ombilin-kota-tua":     { src: "" },
+  "lubang-kalam":               { src: "" },
+  "gedung-pusat-kebudayaan":    { src: "" },
+  "masjid-nurul-islam":         { src: "" },
+  "batu-runciang":              { src: "" },
+  "taman-segitiga":             { src: "" },
+  "geosite-fosil-ikan-gurami":  { src: "" },
+  "padang-savana-kolok":        { src: "" },
+  "waterboom-muaro-kalaban":    { src: "" },
+  "kawasan-kandi":              { src: "" },
+  "kebun-buah-kandi":           { src: "" },
 };
 
 // ── Budaya ───────────────────────────────────────────────────────────────────
-export const gambarBudaya: Record<string, string> = {
-  "bahasa-tansi":               "",
-  "makan-bajamba":              "",
-  "songket-silungkang":         "",
-  "sissca":                     "",
+export const gambarBudaya: Record<string, GambarEntry> = {
+  "bahasa-tansi":               { src: "" },
+  "makan-bajamba":              { src: "" },
+  "songket-silungkang":         { src: "" },
+  "sissca":                     { src: "" },
 };
 
 // ── Kuliner ──────────────────────────────────────────────────────────────────
-export const gambarKuliner: Record<string, string> = {
-  "dendeng-batokok":            "",
-  "kopi-datuk-silungkang":      "",
-  "sup-silungkang":             "",
-  "kerupuk-ubi-silungkang":     "",
-  "pical":                      "",
-  "ale-ale-silungkang":         "",
-  "lamang-tungkek":             "",
-  "kue-pinyaram":               "",
+export const gambarKuliner: Record<string, GambarEntry> = {
+  "dendeng-batokok":            { src: "" },
+  "kopi-datuk-silungkang":      { src: "" },
+  "sup-silungkang":             { src: "" },
+  "kerupuk-ubi-silungkang":     { src: "" },
+  "pical":                      { src: "" },
+  "ale-ale-silungkang":         { src: "" },
+  "lamang-tungkek":             { src: "" },
+  "kue-pinyaram":               { src: "" },
 };
 
 // ── Inovasi ──────────────────────────────────────────────────────────────────
-export const gambarInovasi: Record<string, string> = {
-  "unesco-berkelanjutan":       "",
-  "just-not-green":             "",
-  "gerakan-smart-city":         "",
-  "desa-kreatif-sikalang":      "",
-  "situs-ini-sendiri":          "",
-  "dinamika-tambang":           "",
+export const gambarInovasi: Record<string, GambarEntry> = {
+  "unesco-berkelanjutan":       { src: "" },
+  "just-not-green":             { src: "" },
+  "gerakan-smart-city":         { src: "" },
+  "desa-kreatif-sikalang":      { src: "" },
+  "situs-ini-sendiri":          { src: "" },
+  "dinamika-tambang":           { src: "" },
 };

@@ -1,11 +1,11 @@
-import type { Bilingual, Reference } from "@/types";
+import type { Bilingual, GambarEntry, Reference } from "@/types";
 import { gambarBudaya } from "@/data/gambar";
 
 export type BudayaSection = {
   id: string;
   judul: Bilingual;
   isi: Bilingual;
-  gambar: string;
+  gambar: GambarEntry;
 };
 
 export const budayaData: BudayaSection[] = [
