@@ -21,12 +21,12 @@ export const gambarSejarah: Record<string, GambarEntry> = {
 
 // ── Wisata ───────────────────────────────────────────────────────────────────
 export const gambarWisata: Record<string, GambarEntry> = {
-  "lubang-mbah-soero":          { src: "" },
-  "museum-goedang-ransoem":     { src: "" },
-  "museum-kereta-api":          { src: "" },
-  "danau-biru":                 { src: "" },
-  "puncak-cemara":              { src: "" },
-  "silo":                       { src: "" },
+  "lubang-mbah-soero":          { src: "/images/tambang-mbah-suro.webp", credit: "Foto: Exposs Sumbar" },
+  "museum-goedang-ransoem":     { src: "/images/gudang-ransoem.webp", credit: "https://daerah.sindonews.com/read/126746/29/kisah-goedang-ransoem-saksi-bisu-saat-belanda-mengeksploitasi-sawahlunto-1596834511" },
+  "museum-kereta-api":          { src: "/images/museum-kereta-api.webp", credit: "https://jambi.antaranews.com/berita/533998/ka-mak-itam-dari-sawahlunto-beroperasi-kembali" },
+  "danau-biru":                 { src: "/images/danau-biru-sawahlunto.webp", credit: "https://archipelagoid.com/danau-biru-sawahlunto-pesona-alam-yang-memikat-hati/" },
+  "puncak-cemara":              { src: "/images/puncak-cemara.webp", credit: "https://regional.kompas.com/read/2024/02/05/213253678/puncak-cemara-sawahlunto-daya-tarik-harga-tiket-dan-rute" },
+  "silo":                       { src: "/images/silo.webp", credit: "https://itineraryku.blogspot.com/2011/06/sawahlunto-kawasan-saringan-dan-lobang.html" },
   "makam-belanda":              { src: "" },
   "museum-tambang-ombilin":     { src: "" },
   "puncak-polan":               { src: "" },

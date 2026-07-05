@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ImagePlaceholder from "./ImagePlaceholder";
 
 interface SafeImageProps {
@@ -20,6 +20,15 @@ export default function SafeImage({
 }: SafeImageProps) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (imgRef.current?.complete && !imgRef.current.naturalWidth) {
+      setFailed(true);
+    } else if (imgRef.current?.complete) {
+      setLoaded(true);
+    }
+  }, []);
 
   if (!src || failed) {
     return <ImagePlaceholder className={className} alt={alt} />;
@@ -38,6 +47,7 @@ export default function SafeImage({
 
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
+          ref={imgRef}
           src={src}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
