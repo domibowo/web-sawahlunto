@@ -47,10 +47,10 @@ export const gambarWisata: Record<string, GambarEntry> = {
 
 // ── Budaya ───────────────────────────────────────────────────────────────────
 export const gambarBudaya: Record<string, GambarEntry> = {
-  "bahasa-tansi":               { src: "/images/bahasa-tansi.webp", credit: "https://www.researchgate.net/publication/344731808_Menggali_Bara_Menemu_Bahasa_Bahasa_Tansi_-_Bahasa_Kreol_Buruh_dari_Sawahlunto by Elsa Putri Ermisah Syafril" },
-  "makan-bajamba":              { src: "/images/makan-bajamba.webp", credit: "https://sawahluntokota.go.id/baca/sajian-makan-bajamba-jadi-puncak-hari-jadi-kota-sawahlunto-ke-135" },
-  "songket-silungkang":         { src: "/images/songket-silungkang.webp", credit: "https://www.expossumbar.com/berita/48669/songket-silungkang-tenun-minangkabau-di-pasar-global" },
-  "sissca":                     { src: "/images/sissca.webp", credit: "https://www.indonesia.travel/id/id/events/event-detail/sawahlunto-international-songket-silungkang-carnival" },
+  "bahasa-tansi":               { src: "/images/bahasa-tansi.webp", credit: "Foto: ResearchGate / Elsa Putri Ermisah Syafril" },
+  "makan-bajamba":              { src: "/images/makan-bajamba.webp", credit: "Foto: Portal Resmi Kota Sawahlunto" },
+  "songket-silungkang":         { src: "/images/songket-silungkang.webp", credit: "Foto: Exposs Sumbar" },
+  "sissca":                     { src: "/images/sissca.webp", credit: "Foto: Indonesia.travel" },
 };
 
 // ── Kuliner ──────────────────────────────────────────────────────────────────
