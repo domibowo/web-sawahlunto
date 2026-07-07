@@ -27,7 +27,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      images: item.gambar ? [{ url: item.gambar, alt: title }] : [],
+      images: item.gambar.src ? [{ url: item.gambar.src, alt: title }] : [],
     },
     alternates: {
       canonical: `https://sawahlunto.id/${locale}/wisata/${slug}`,
@@ -101,8 +101,9 @@ export default async function WisataDetailPage({
       <HeroBanner
         size="sm"
         title={nama}
-        imageSrc={item.gambar || undefined}
+        imageSrc={item.gambar.src || undefined}
         imageAlt={nama}
+        imageCredit={item.gambar.credit}
       />
 
       {/* Konten */}

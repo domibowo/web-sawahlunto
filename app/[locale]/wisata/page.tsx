@@ -50,8 +50,9 @@ export default async function WisataPage({
               {/* Gambar */}
               <div className="w-full md:w-2/5 shrink-0">
                 <SafeImage
-                  src={item.gambar}
+                  src={item.gambar.src}
                   alt={item.nama[lang]}
+                  credit={item.gambar.credit}
                   className="w-full aspect-video"
                 />
               </div>

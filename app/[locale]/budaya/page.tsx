@@ -52,8 +52,9 @@ export default async function BudayaPage({
               {/* Gambar */}
               <div className="w-full md:w-2/5 shrink-0">
                 <SafeImage
-                  src={section.gambar}
+                  src={section.gambar.src}
                   alt={section.judul[lang]}
+                  credit={section.gambar.credit}
                   className="w-full aspect-video"
                 />
               </div>

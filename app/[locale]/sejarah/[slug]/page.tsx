@@ -26,7 +26,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      images: item.gambar ? [{ url: item.gambar, alt: title }] : [],
+      images: item.gambar.src ? [{ url: item.gambar.src, alt: title }] : [],
     },
     alternates: {
       canonical: `https://sawahlunto.id/${locale}/sejarah/${slug}`,
@@ -81,8 +81,9 @@ export default async function SejarahDetailPage({
         size="sm"
         badge={item.tahun}
         title={judul}
-        imageSrc={item.gambar || undefined}
+        imageSrc={item.gambar.src || undefined}
         imageAlt={judul}
+        imageCredit={item.gambar.credit}
       />
 
       {/* Artikel */}

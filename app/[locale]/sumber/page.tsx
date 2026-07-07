@@ -816,8 +816,8 @@ export default async function SumberPage({
             {isId ? "Catatan editorial: " : "Editorial note: "}
           </span>
           {isId
-            ? "Daftar ini mencakup 75 sumber yang diverifikasi dan digunakan dalam penyusunan konten situs sawahlunto.id. Sumber akademik, resmi UNESCO, dan pemerintah diprioritaskan saat ada perbedaan data antar sumber."
-            : "This list covers 75 verified sources used in compiling the content of sawahlunto.id. Academic, official UNESCO, and government sources are prioritised when data conflicts arise."}
+            ? "Daftar ini mencakup 75 sumber yang diverifikasi dan digunakan dalam penyusunan konten situs sawahlunto.kotague.id. Sumber akademik, resmi UNESCO, dan pemerintah diprioritaskan saat ada perbedaan data antar sumber."
+            : "This list covers 75 verified sources used in compiling the content of sawahlunto.kotague.id. Academic, official UNESCO, and government sources are prioritised when data conflicts arise."}
         </div>
       </div>
     </>

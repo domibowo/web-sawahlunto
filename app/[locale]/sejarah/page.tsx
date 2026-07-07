@@ -54,7 +54,7 @@ export default async function SejarahPage({
             const isEven = index % 2 === 0; // kiri = even, kanan = odd di desktop
             const judul = item.judul[lang];
             const ringkasan = item.ringkasan[lang];
-            const image = item.gambar;
+            const image = item.gambar.src;
 
             return (
               <li key={item.slug} className="relative">
@@ -115,23 +115,30 @@ export default async function SejarahPage({
                       </div>
                     ) : (
                       /* Odd → gambar di kiri */
-                      <Link href={`/${locale}/sejarah/${item.slug}`} className="relative block w-full max-w-xs aspect-video rounded-lg overflow-hidden shadow-xl">
-                        {item.gambar ?
-                          <Image
-                            src={item.gambar}
-                            alt={item.judul[lang]}
-                            fill
-                            sizes="(max-width: 640px) 100vw, 320px"
-                            className="object-cover transition-transform duration-500 ease-in-out hover:scale-125"
-                            priority
-                          />
-                          :
-                          <ImagePlaceholder
-                            className="w-full aspect-video rounded-lg"
-                            alt={judul}
-                          />
-                        }
-                      </Link>
+                      <figure className="w-full max-w-xs">
+                        <Link href={`/${locale}/sejarah/${item.slug}`} className="relative block w-full aspect-video rounded-lg overflow-hidden shadow-xl">
+                          {item.gambar.src ?
+                            <Image
+                              src={item.gambar.src}
+                              alt={item.judul[lang]}
+                              fill
+                              sizes="(max-width: 640px) 100vw, 320px"
+                              className="object-cover transition-transform duration-500 ease-in-out hover:scale-125"
+                              priority
+                            />
+                            :
+                            <ImagePlaceholder
+                              className="w-full aspect-video rounded-lg"
+                              alt={judul}
+                            />
+                          }
+                        </Link>
+                        {item.gambar.credit && (
+                          <figcaption className="mt-1 text-right text-xs text-charcoal/40 italic">
+                            {item.gambar.credit}
+                          </figcaption>
+                        )}
+                      </figure>
                     )}
                   </div>
 
@@ -149,23 +156,30 @@ export default async function SejarahPage({
                   <div className={`flex justify-start pl-8`}>
                     {isEven ? (
                       /* Even → gambar di kanan */
-                      <Link href={`/${locale}/sejarah8/${item.slug}`} className="relative block w-full max-w-xs aspect-video rounded-lg overflow-hidden shadow-xl">
-                        {item.gambar ?
-                          <Image
-                            src={item.gambar}
-                            alt={item.judul[lang]}
-                            fill
-                            sizes="(max-width: 640px) 100vw, 320px"
-                            className="object-cover transition-transform duration-500 ease-in-out hover:scale-125"
-                            priority
-                          />
-                          :
-                          <ImagePlaceholder
-                            className="w-full aspect-video rounded-lg"
-                            alt={judul}
-                          />
-                        }
-                      </Link>
+                      <figure className="w-full max-w-xs">
+                        <Link href={`/${locale}/sejarah/${item.slug}`} className="relative block w-full aspect-video rounded-lg overflow-hidden shadow-xl">
+                          {item.gambar.src ?
+                            <Image
+                              src={item.gambar.src}
+                              alt={item.judul[lang]}
+                              fill
+                              sizes="(max-width: 640px) 100vw, 320px"
+                              className="object-cover transition-transform duration-500 ease-in-out hover:scale-125"
+                              priority
+                            />
+                            :
+                            <ImagePlaceholder
+                              className="w-full aspect-video rounded-lg"
+                              alt={judul}
+                            />
+                          }
+                        </Link>
+                        {item.gambar.credit && (
+                          <figcaption className="mt-1 text-xs text-charcoal/40 italic">
+                            {item.gambar.credit}
+                          </figcaption>
+                        )}
+                      </figure>
                     ) : (
                       /* Odd → teks di kanan */
                       <div className="max-w-xs">

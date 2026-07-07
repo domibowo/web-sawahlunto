@@ -1,5 +1,7 @@
 export type Bilingual = { id: string; en: string };
 
+export type GambarEntry = { src: string; credit?: string };
+
 export type Reference = {
   nomor: number;
   sumber: string;
@@ -12,7 +14,7 @@ export type TimelineEvent = {
   judul: Bilingual;
   ringkasan: Bilingual;
   detail: Bilingual;
-  gambar: string; // path ke public/, kosong = placeholder
+  gambar: GambarEntry;
   referensi: Reference[];
 };
 
@@ -26,7 +28,7 @@ export type WisataItem = {
     hargaTiket: Bilingual;
     tips: Bilingual;
   };
-  gambar: string;
+  gambar: GambarEntry;
   statusBadge?: Bilingual;
 };
 
