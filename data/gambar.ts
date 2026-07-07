@@ -60,17 +60,16 @@ export const gambarKuliner: Record<string, GambarEntry> = {
   "sup-silungkang":             { src: "/images/sup-silungkang.webp", credit: "https://www.tempo.co/gaya-hidup/sensasi-sop-silungkang-nan-alami-1697582" },
   "kerupuk-ubi-silungkang":     { src: "/images/kerupuk-ubi-silungkang.webp", credit: "https://www.idntimes.com/food/diet/camilan-khas-paling-populer-di-sawahlunto-c1c2-01-3ln1w-q7kzgd" },
   "pical":                      { src: "/images/pical.webp", credit: "https://blog.pigijo.com/5-makanan-khas-sawahlunto-yang-wajib-kawanjo-cicipi-dijamin-bikin-nagih/" },
-  "ale-ale-silungkang":         { src: "/images/ale-ale-silungkang.webp", credit: "" },
-  "lamang-tungkek":             { src: "/images/lamang-tungkek.webp", credit: "" },
-  "kue-pinyaram":               { src: "/images/kue-pinyaram.webp", credit: "" },
+  "ale-ale-silungkang":         { src: "/images/ale-ale-silungkang.webp", credit: "https://jadesta.kemenpar.go.id/paket/aleale_apam" },
+  "lamang-tungkek":             { src: "/images/lamang-tungkek.webp", credit: "https://seringjalan.com/6-makanan-dan-kuliner-khas-kota-sawahlunto/" },
+  "kue-pinyaram":               { src: "/images/kue-pinyaram.webp", credit: "https://seringjalan.com/6-makanan-dan-kuliner-khas-kota-sawahlunto/" },
 };
 
 // ── Inovasi ──────────────────────────────────────────────────────────────────
 export const gambarInovasi: Record<string, GambarEntry> = {
-  "unesco-berkelanjutan":       { src: "/images/unesco-berkelanjutan.webp", credit: "" },
-  "just-not-green":             { src: "/images/just-not-green.webp", credit: "" },
-  "gerakan-smart-city":         { src: "/images/gerakan-smart-city.webp", credit: "" },
-  "desa-kreatif-sikalang":      { src: "/images/desa-kreatif-sikalang.webp", credit: "" },
-  "situs-ini-sendiri":          { src: "/images/situs-ini-sendiri.webp", credit: "" },
-  "dinamika-tambang":           { src: "/images/dinamika-tambang.webp", credit: "" },
+  "unesco-berkelanjutan":       { src: "/images/unesco-berkelanjutan.webp", credit: "https://whc.unesco.org/en/news/2662" },
+  "just-not-green":             { src: "/images/just-not-green.webp", credit: "https://localisesdgs-indonesia.org/beranda/cs/inovasi-just-not-green-kota-sawahlunto-sebagai-upaya-peningkatan-sektor-pariwisata" },
+  "gerakan-smart-city":         { src: "/images/gerakan-smart-city.webp", credit: "https://sumbarfokus.com/diskominfo-sawahlunto-gelar-briefing-bimtek-gerakan-menuju-100-smart-city/" },
+  "desa-kreatif-sikalang":      { src: "/images/desa-kreatif-sikalang.webp", credit: "https://sawahluntokota.go.id/baca/pemdes-sikalang-rangkai-beragam-program-inovasi-sepanjang-2026" },
+  "dinamika-tambang":           { src: "/images/dinamika-tambang.webp", credit: "https://www.cnbcindonesia.com/news/20260407152857-4-724602/ptba-targetkan-bisa-nambang-lagi-di-ombilin-akhir-2026" },
 };
