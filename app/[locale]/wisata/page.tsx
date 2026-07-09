@@ -54,6 +54,7 @@ export default async function WisataPage({
                   alt={item.nama[lang]}
                   credit={item.gambar.credit}
                   className="w-full aspect-video"
+                  priority={index === 0}
                 />
               </div>
 

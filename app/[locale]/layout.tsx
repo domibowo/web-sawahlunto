@@ -3,7 +3,7 @@ import { Lora, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ChatbotWidget from "@/components/ChatbotWidget";
+import ChatbotLoader from "@/components/ChatbotLoader";
 import { getDictionary } from "@/dictionaries";
 
 const lora = Lora({
@@ -94,11 +94,15 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${lora.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} h-full`}
     >
+      <head>
+        <link rel="preconnect" href="https://r2.kotague.id" />
+        <link rel="dns-prefetch" href="https://r2.kotague.id" />
+      </head>
       <body className="min-h-full flex flex-col">
         <Navbar locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />
-        <ChatbotWidget locale={locale} lang={locale as "id" | "en"} />
+        <ChatbotLoader locale={locale} lang={locale as "id" | "en"} />
       </body>
     </html>
   );

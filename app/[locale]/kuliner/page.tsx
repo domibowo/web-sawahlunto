@@ -56,6 +56,7 @@ export default async function KulinerPage({
                   alt={section.judul[lang]}
                   credit={section.gambar.credit}
                   className="w-full aspect-video"
+                  priority={index === 0}
                 />
               </div>
 

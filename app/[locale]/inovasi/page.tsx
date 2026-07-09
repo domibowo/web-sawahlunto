@@ -57,6 +57,7 @@ export default async function InovasiPage({
                   alt={section.judul[lang]}
                   credit={section.gambar.credit}
                   className="w-full aspect-video"
+                  priority={index === 0}
                 />
               </div>
 
