@@ -18,7 +18,7 @@ export default function CTAButton({
 
   const styles = {
     primary: "bg-terracotta-dark text-cream hover:bg-charcoal",
-    outline: "border-2 border-teal text-teal hover:bg-teal hover:text-cream",
+    outline: "border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-cream",
   };
 
   return (

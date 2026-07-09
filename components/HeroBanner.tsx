@@ -29,7 +29,7 @@ export default function HeroBanner({
       {/* Base bg — visible sebelum gambar siap / saat tidak ada gambar */}
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(160deg, #3a2e2a 0%, #2B2420 100%)" }}
+        style={{ background: "#2B2420" }}
       />
       {imageSrc && (
         <Image
@@ -50,7 +50,7 @@ export default function HeroBanner({
         }`}
       >
         {badge && (
-          <span className="inline-block font-mono text-sm sm:text-base uppercase tracking-[0.08em] text-terracotta mb-3 sm:mb-4">
+          <span className="inline-block font-mono text-xs uppercase tracking-[0.08em] text-terracotta mb-3 sm:mb-4">
             {badge}
           </span>
         )}

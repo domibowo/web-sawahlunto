@@ -61,7 +61,7 @@ export default async function WisataPage({
               {/* Teks */}
               <div className="flex-1">
                 {item.statusBadge && (
-                  <span className="inline-block mb-3 px-2.5 py-1 rounded text-xs font-mono font-semibold uppercase tracking-wide bg-amber-100 text-amber-700 border border-amber-300">
+                  <span className="inline-block mb-3 px-2.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wide bg-terracotta text-cream">
                     ⚠ {item.statusBadge[lang]}
                   </span>
                 )}
