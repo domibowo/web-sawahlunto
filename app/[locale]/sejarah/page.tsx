@@ -116,7 +116,7 @@ export default async function SejarahPage({
                     ) : (
                       /* Odd → gambar di kiri */
                       <figure className="w-full max-w-xs">
-                        <Link href={`/${locale}/sejarah/${item.slug}`} className="relative block w-full aspect-video rounded-lg overflow-hidden shadow-xl">
+                        <Link href={`/${locale}/sejarah/${item.slug}`} className="relative block w-full aspect-video overflow-hidden">
                           {item.gambar.src ?
                             <Image
                               src={item.gambar.src}
@@ -128,7 +128,7 @@ export default async function SejarahPage({
                             />
                             :
                             <ImagePlaceholder
-                              className="w-full aspect-video rounded-lg"
+                              className="w-full aspect-video"
                               alt={judul}
                             />
                           }
@@ -157,7 +157,7 @@ export default async function SejarahPage({
                     {isEven ? (
                       /* Even → gambar di kanan */
                       <figure className="w-full max-w-xs">
-                        <Link href={`/${locale}/sejarah/${item.slug}`} className="relative block w-full aspect-video rounded-lg overflow-hidden shadow-xl">
+                        <Link href={`/${locale}/sejarah/${item.slug}`} className="relative block w-full aspect-video overflow-hidden">
                           {item.gambar.src ?
                             <Image
                               src={item.gambar.src}
@@ -169,7 +169,7 @@ export default async function SejarahPage({
                             />
                             :
                             <ImagePlaceholder
-                              className="w-full aspect-video rounded-lg"
+                              className="w-full aspect-video"
                               alt={judul}
                             />
                           }

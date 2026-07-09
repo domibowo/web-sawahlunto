@@ -57,6 +57,7 @@ export default async function InovasiPage({
                   alt={section.judul[lang]}
                   credit={section.gambar.credit}
                   className="w-full aspect-video"
+                  priority={index === 0}
                 />
               </div>
 
@@ -115,12 +116,12 @@ export default async function InovasiPage({
 }
 
 const KATEGORI_COLOR: Record<string, string> = {
-  "Smart Branding":     "bg-terracotta/10 text-terracotta",
-  "Smart Environment":  "bg-teal/10 text-teal-dark",
-  "Smart Living":       "bg-teal/10 text-teal-dark",
-  "Smart Society":      "bg-terracotta/10 text-terracotta",
-  "Smart Economy":      "bg-teal/10 text-teal-dark",
-  "Smart Governance":   "bg-terracotta/10 text-terracotta",
+  "Smart Branding":     "bg-terracotta text-cream",
+  "Smart Environment":  "bg-teal text-cream",
+  "Smart Living":       "bg-teal text-cream",
+  "Smart Society":      "bg-terracotta text-cream",
+  "Smart Economy":      "bg-teal text-cream",
+  "Smart Governance":   "bg-charcoal text-cream",
 };
 
 function DimensiGrid({ dimensi, lang, locale }: { dimensi: InovasiDimensi[]; lang: "id" | "en"; locale: string }) {
@@ -139,7 +140,7 @@ function DimensiGrid({ dimensi, lang, locale }: { dimensi: InovasiDimensi[]; lan
         {dimensi.map((d) => (
           <div
             key={d.nama}
-            className="rounded-xl border border-cream-dark bg-white/60 px-4 py-3 flex flex-col gap-1"
+            className="border border-cream-dark bg-white/60 px-4 py-3 flex flex-col gap-1"
           >
             <span className={`self-start text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${KATEGORI_COLOR[d.kategori] ?? "bg-charcoal/10 text-charcoal"}`}>
               {d.kategori}

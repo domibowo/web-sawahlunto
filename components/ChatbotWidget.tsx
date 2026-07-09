@@ -107,7 +107,7 @@ export default function ChatbotWidget({ lang }: Props) {
             maxHeight: "min(480px, calc(100dvh - 6rem))",
             background: "#F4ECDD",
             borderRadius: "16px",
-            boxShadow: "0 8px 32px rgba(43,36,32,0.18), 0 2px 8px rgba(43,36,32,0.10)",
+            border: "1px solid rgba(43,36,32,0.15)",
           }}
         >
           {/* Header */}
@@ -181,7 +181,7 @@ export default function ChatbotWidget({ lang }: Props) {
                   <div className="flex flex-col gap-1.5">
                     <p
                       className="text-[10px] uppercase tracking-wide"
-                      style={{ color: "rgba(43,36,32,0.45)", fontFamily: "var(--font-plus-jakarta, sans-serif)" }}
+                      style={{ color: "rgba(43,36,32,0.45)", fontFamily: "var(--font-jetbrains-mono, monospace)" }}
                     >
                       {isId ? "Pertanyaan terkait" : "Related questions"}
                     </p>
@@ -310,7 +310,7 @@ export default function ChatbotWidget({ lang }: Props) {
           height: "52px",
           borderRadius: "50%",
           background: "#C1502E",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.35), 0 0 0 3px #F4ECDD",
+          outline: "3px solid #F4ECDD",
           color: "#F4ECDD",
         }}
       >

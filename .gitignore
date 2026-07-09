@@ -45,3 +45,7 @@ next-env.d.ts
 yarn.lock
 package-lock.json
 pnpm-lock.yaml
+
+# Skilld references (recreated by `skilld install`)
+.skilld
+.unlighthouse

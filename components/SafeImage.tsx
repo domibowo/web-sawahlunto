@@ -51,7 +51,8 @@ export default function SafeImage({
           src={src}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
-          decoding="async"
+          fetchPriority={priority ? "high" : "auto"}
+          decoding={priority ? "sync" : "async"}
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: loaded ? 1 : 0,

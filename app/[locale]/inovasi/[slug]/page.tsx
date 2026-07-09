@@ -42,12 +42,12 @@ export async function generateMetadata({
 }
 
 const KATEGORI_COLOR: Record<string, string> = {
-  "Smart Branding":    "bg-terracotta/10 text-terracotta",
-  "Smart Environment": "bg-teal/10 text-teal-dark",
-  "Smart Living":      "bg-teal/10 text-teal-dark",
-  "Smart Society":     "bg-terracotta/10 text-terracotta",
-  "Smart Economy":     "bg-teal/10 text-teal-dark",
-  "Smart Governance":  "bg-terracotta/10 text-terracotta",
+  "Smart Branding":    "bg-terracotta text-cream",
+  "Smart Environment": "bg-teal text-cream",
+  "Smart Living":      "bg-teal text-cream",
+  "Smart Society":     "bg-terracotta text-cream",
+  "Smart Economy":     "bg-teal text-cream",
+  "Smart Governance":  "bg-charcoal text-cream",
 };
 
 export default async function InovasiDimensiPage({

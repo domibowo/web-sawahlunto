@@ -17,8 +17,8 @@ export default function CTAButton({
     "inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-full font-medium text-sm sm:text-base transition-colors min-h-11";
 
   const styles = {
-    primary: "bg-terracotta text-cream hover:bg-terracotta-dark",
-    outline: "border-2 border-teal text-teal hover:bg-teal hover:text-cream",
+    primary: "bg-terracotta-dark text-cream hover:bg-charcoal",
+    outline: "border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-cream",
   };
 
   return (
