@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "optimize-images": "node --input-type=module scripts/optimize-images.js",
-    "download-map": "node scripts/download-map.mjs",
-    "prepare": "npx skilld prepare || true"
+    "download-map": "node scripts/download-map.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^4.7.1",
