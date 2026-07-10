@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { sejarahData } from "@/data/sejarah";
 import { wisataData } from "@/data/wisata";
 
+export const dynamic = "force-static";
+
 const BASE = "https://sawahlunto.id";
 const LOCALES = ["id", "en"] as const;
 
