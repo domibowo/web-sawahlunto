@@ -2,8 +2,8 @@
 FROM node:24-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile --ignore-engines
+COPY package.json package-lock.json* ./
+RUN npm install
 
 # Stage 2: Build static export
 FROM node:24-alpine AS builder
@@ -11,7 +11,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN yarn build
+RUN npm run build
 
 # Stage 3: Serve static files
 FROM node:24-alpine AS runner
