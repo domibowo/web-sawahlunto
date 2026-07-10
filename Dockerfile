@@ -14,8 +14,8 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
 # Stage 3: Serve static files
-FROM node:24-alpine AS runner
-RUN npm install -g serve
-COPY --from=builder /app/out /app/out
+FROM nginx:alpine AS runner
+COPY --from=builder /app/out /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 3000
-CMD ["serve", "-s", "/app/out", "-l", "3000"]
+CMD ["nginx", "-g", "daemon off;"]
