@@ -82,6 +82,10 @@ export default async function WisataDetailPage({
   const detail = item.detail[lang];
   const { prev, next } = getAdjacentWisata(slug);
 
+  const usedRefs = new Set<number>();
+  for (const m of item.detail.id.matchAll(/\[(\d+)\]/g)) usedRefs.add(Number(m[1]));
+  const filteredReferensi = wisataReferensi.filter((r) => usedRefs.has(r.nomor));
+
   return (
     <React.Fragment key={slug}>
       {/* Breadcrumb */}
@@ -183,7 +187,7 @@ export default async function WisataDetailPage({
           </div>
         )}
 
-        <ReferenceList items={wisataReferensi} scope={slug} />
+        <ReferenceList items={filteredReferensi} scope={slug} />
       </div>
 
       {/* Prev / Next */}

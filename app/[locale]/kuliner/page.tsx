@@ -3,8 +3,7 @@ import { getDictionary } from "@/dictionaries";
 import { kulinerData, kulinerReferensi } from "@/data/kuliner";
 import HeroBanner from "@/components/HeroBanner";
 import CTAButton from "@/components/CTAButton";
-import SafeImage from "@/components/SafeImage";
-import FootnoteText from "@/components/FootnoteText";
+import ContentGrid from "@/components/ContentGrid";
 import ReferenceList from "@/components/ReferenceList";
 
 export async function generateMetadata({
@@ -39,40 +38,11 @@ export default async function KulinerPage({
 
   return (
     <>
-      <HeroBanner size="sm" title={k.heroTitle} subtitle={k.intro} />
+      <HeroBanner size="sm" title={k.heroTitle} subtitle={k.intro} imageSrc="/images/dendeng-batokok.webp" imageAlt="Dendeng Batokok" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex flex-col gap-16 sm:gap-20">
-        {kulinerData.map((section, index) => {
-          const isEven = index % 2 === 0;
-          return (
-            <section
-              key={section.id}
-              className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-8 md:gap-12 items-center`}
-            >
-              {/* Gambar */}
-              <div className="w-full md:w-2/5 shrink-0">
-                <SafeImage
-                  src={section.gambar.src}
-                  alt={section.judul[lang]}
-                  credit={section.gambar.credit}
-                  className="w-full aspect-video"
-                  priority={index === 0}
-                />
-              </div>
+      <ContentGrid items={kulinerData} lang={lang} />
 
-              {/* Teks */}
-              <div className="flex-1">
-                <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-charcoal leading-snug mb-4">
-                  {section.judul[lang]}
-                </h2>
-                <p className="text-charcoal-light text-base sm:text-lg leading-relaxed">
-                  <FootnoteText text={section.isi[lang]} scope="kuliner" />
-                </p>
-              </div>
-            </section>
-          );
-        })}
-
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         <ReferenceList items={kulinerReferensi} scope="kuliner" />
       </div>
 

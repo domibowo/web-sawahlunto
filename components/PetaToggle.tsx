@@ -3,8 +3,9 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import PetaInteraktif from "@/components/PetaInteraktif";
+import RuteWisata from "@/components/RuteWisata";
 
-// Lazy-load MapLibre + PMTiles — tidak masuk bundle awal
+// Lazy-load MapLibre — tidak masuk bundle awal
 const PetaSungguhan = dynamic(() => import("@/components/PetaSungguhan"), { ssr: false });
 
 interface Props {
@@ -13,13 +14,25 @@ interface Props {
   tapHint: string;
   toggleIlustrasi: string;
   toggleSungguhan: string;
+  toggleRute: string;
   needsInternet: string;
+  ruteStrings: {
+    ruteStart: string;
+    ruteCurrent: string;
+    ruteNext: string;
+    rutePath: string;
+    ruteBack: string;
+    ruteReset: string;
+    ruteDetail: string;
+    ruteEnd: string;
+  };
 }
 
 export default function PetaToggle({
-  locale, lang, tapHint, toggleIlustrasi, toggleSungguhan, needsInternet,
+  locale, lang, tapHint, toggleIlustrasi, toggleSungguhan, toggleRute,
+  needsInternet, ruteStrings,
 }: Props) {
-  const [mode, setMode] = useState<"ilustrasi" | "sungguhan">("ilustrasi");
+  const [mode, setMode] = useState<"rute" | "ilustrasi" | "sungguhan">("rute");
 
   const btnBase = "px-4 py-1.5 text-sm font-sans font-medium transition-colors rounded-full";
   const active = "bg-charcoal text-cream";
@@ -28,7 +41,13 @@ export default function PetaToggle({
   return (
     <>
       {/* Toggle */}
-      <div className="flex justify-center gap-2 mb-6">
+      <div className="flex justify-center gap-2 mb-6 flex-wrap">
+        <button
+          onClick={() => setMode("rute")}
+          className={`${btnBase} ${mode === "rute" ? active : inactive}`}
+        >
+          {toggleRute}
+        </button>
         <button
           onClick={() => setMode("ilustrasi")}
           className={`${btnBase} ${mode === "ilustrasi" ? active : inactive}`}
@@ -42,6 +61,10 @@ export default function PetaToggle({
           {toggleSungguhan}
         </button>
       </div>
+
+      {mode === "rute" && (
+        <RuteWisata locale={locale} lang={lang} strings={ruteStrings} />
+      )}
 
       {mode === "ilustrasi" && (
         <>
