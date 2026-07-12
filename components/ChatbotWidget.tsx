@@ -107,7 +107,8 @@ export default function ChatbotWidget({ lang }: Props) {
             maxHeight: "min(480px, calc(100dvh - 6rem))",
             background: "#F4ECDD",
             borderRadius: "16px",
-            border: "1px solid rgba(43,36,32,0.15)",
+            border: "1.5px solid rgba(255,255,255,0.85)",
+            boxShadow: "0 8px 32px rgba(43,36,32,0.22), 0 2px 8px rgba(43,36,32,0.12)",
           }}
         >
           {/* Header */}

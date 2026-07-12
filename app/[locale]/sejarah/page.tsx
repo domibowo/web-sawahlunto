@@ -99,7 +99,7 @@ export default async function SejarahPage({
                       /* Even → teks di kiri */
                       <div className="max-w-xs text-right">
                         <Link href={`/${locale}/sejarah/${item.slug}`}>
-                          <h2 className="font-serif text-xl font-semibold text-charcoal hover:text-teal transition-colors line-clamp-1">
+                          <h2 className="font-serif text-xl font-semibold text-charcoal hover:text-teal transition-colors">
                             {judul}
                           </h2>
                         </Link>
@@ -184,7 +184,7 @@ export default async function SejarahPage({
                       /* Odd → teks di kanan */
                       <div className="max-w-xs">
                         <Link href={`/${locale}/sejarah/${item.slug}`}>
-                          <h2 className="font-serif text-xl font-semibold text-charcoal hover:text-teal transition-colors line-clamp-1">
+                          <h2 className="font-serif text-xl font-semibold text-charcoal hover:text-teal transition-colors">
                             {judul}
                           </h2>
                         </Link>

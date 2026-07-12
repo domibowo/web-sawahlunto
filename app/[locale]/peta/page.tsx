@@ -36,7 +36,7 @@ export default async function PetaPage({
 
   return (
     <>
-      <HeroBanner size="sm" title={p.heroTitle} subtitle={p.intro} />
+      <HeroBanner size="sm" title={p.heroTitle} subtitle={p.intro} imageSrc="/images/taman-segitiga.webp" imageAlt="Taman Segitiga Sawahlunto" />
 
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
         <PetaToggle
@@ -45,7 +45,18 @@ export default async function PetaPage({
           tapHint={p.tapHint}
           toggleIlustrasi={p.toggleIlustrasi}
           toggleSungguhan={p.toggleSungguhan}
+          toggleRute={p.toggleRute}
           needsInternet={p.needsInternet}
+          ruteStrings={{
+            ruteStart:   p.ruteStart,
+            ruteCurrent: p.ruteCurrent,
+            ruteNext:    p.ruteNext,
+            rutePath:    p.rutePath,
+            ruteBack:    p.ruteBack,
+            ruteReset:   p.ruteReset,
+            ruteDetail:  p.ruteDetail,
+            ruteEnd:     p.ruteEnd,
+          }}
         />
       </section>
 

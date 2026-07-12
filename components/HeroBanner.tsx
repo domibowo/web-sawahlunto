@@ -11,7 +11,7 @@ interface HeroBannerProps {
 }
 
 const heightMap = {
-  lg: "h-72 sm:h-96 md:h-[480px] lg:h-[560px]",
+  lg: "h-72 sm:h-96 md:h-120 lg:h-140",
   sm: "h-48 sm:h-64 md:h-72",
 };
 
@@ -43,6 +43,16 @@ export default function HeroBanner({
         />
       )}
 
+      {/* Gradient overlay agar teks selalu terbaca di atas foto */}
+      {imageSrc && (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to bottom, rgba(43,36,32,0.20) 0%, rgba(43,36,32,0.55) 100%)",
+          }}
+        />
+      )}
+
       {/* Content */}
       <div
         className={`absolute inset-0 flex flex-col items-center px-4 text-center ${
@@ -50,7 +60,13 @@ export default function HeroBanner({
         }`}
       >
         {badge && (
-          <span className="inline-block font-mono text-xs uppercase tracking-[0.08em] text-terracotta mb-3 sm:mb-4">
+          <span
+            className="inline-block font-mono text-xs uppercase tracking-[0.08em] text-cream mb-3 sm:mb-4"
+            style={{
+              textShadow: "0 1px 3px rgba(43,36,32,0.8)",
+              WebkitTextStroke: "0.3px rgba(193,80,46,0.7)",
+            }}
+          >
             {badge}
           </span>
         )}
@@ -60,11 +76,15 @@ export default function HeroBanner({
               ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
               : "text-2xl sm:text-3xl md:text-4xl"
           }`}
+          style={{ textShadow: "0 2px 8px rgba(43,36,32,0.6)" }}
         >
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-3 text-cream/80 text-sm sm:text-base max-w-xl leading-relaxed">
+          <p
+            className="mt-3 text-cream/90 text-sm sm:text-base max-w-xl leading-relaxed"
+            style={{ textShadow: "0 1px 4px rgba(43,36,32,0.5)" }}
+          >
             {subtitle}
           </p>
         )}
