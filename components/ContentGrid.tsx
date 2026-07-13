@@ -132,6 +132,7 @@ export default function ContentGrid({ items, lang, renderExtra }: Props) {
                   src={activeItem.gambar.src}
                   alt={activeItem.judul[lang]}
                   credit={activeItem.gambar.credit}
+                  creditClass="text-cream/40"
                   className="w-full aspect-video"
                 />
                 <div>

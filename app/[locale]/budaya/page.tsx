@@ -38,7 +38,7 @@ export default async function BudayaPage({
 
   return (
     <>
-      <HeroBanner size="sm" title={b.heroTitle} subtitle={b.intro} imageSrc="/images/songket-silungkang.webp" imageAlt="Songket Silungkang" />
+      <HeroBanner size="sm" title={b.heroTitle} subtitle={b.intro} imageSrc="/images/songket-silungkang.webp" imageAlt="Songket Silungkang" imageCredit="Foto: Exposs Sumbar" />
 
       <ContentGrid items={budayaData} lang={lang} />
 

@@ -36,7 +36,7 @@ export default async function PetaPage({
 
   return (
     <>
-      <HeroBanner size="sm" title={p.heroTitle} subtitle={p.intro} imageSrc="/images/taman-segitiga.webp" imageAlt="Taman Segitiga Sawahlunto" />
+      <HeroBanner size="sm" title={p.heroTitle} subtitle={p.intro} imageSrc="/images/taman-segitiga.webp" imageAlt="Taman Segitiga Sawahlunto" imageCredit="Foto: Palanta Budaya" />
 
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
         <PetaToggle

@@ -38,7 +38,7 @@ export default async function KulinerPage({
 
   return (
     <>
-      <HeroBanner size="sm" title={k.heroTitle} subtitle={k.intro} imageSrc="/images/dendeng-batokok.webp" imageAlt="Dendeng Batokok" />
+      <HeroBanner size="sm" title={k.heroTitle} subtitle={k.intro} imageSrc="/images/dendeng-batokok.webp" imageAlt="Dendeng Batokok" imageCredit="Foto: RRI Bukittinggi" />
 
       <ContentGrid items={kulinerData} lang={lang} />
 
