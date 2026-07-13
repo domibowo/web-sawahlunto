@@ -40,7 +40,7 @@ export default async function InovasiPage({
 
   return (
     <>
-      <HeroBanner size="sm" title={iv.heroTitle} subtitle={iv.intro} imageSrc="/images/gerakan-smart-city.webp" imageAlt="Gerakan Smart City Sawahlunto" />
+      <HeroBanner size="sm" title={iv.heroTitle} subtitle={iv.intro} imageSrc="/images/gerakan-smart-city.webp" imageAlt="Gerakan Smart City Sawahlunto" imageCredit="Foto: Sumbar Fokus" />
 
       <InovasiContentGrid
         items={allItems}

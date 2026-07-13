@@ -36,7 +36,7 @@ export default async function WisataPage({
 
   return (
     <>
-      <HeroBanner size="sm" title={w.heroTitle} subtitle={w.intro} imageSrc="/images/danau-biru-sawahlunto.webp" imageAlt="Danau Biru Sawahlunto" />
+      <HeroBanner size="sm" title={w.heroTitle} subtitle={w.intro} imageSrc="/images/danau-biru-sawahlunto.webp" imageAlt="Danau Biru Sawahlunto" imageCredit="Foto: Archipelago Indonesia" />
 
       <WisataGrid
         locale={locale}

@@ -9,6 +9,7 @@ interface SafeImageProps {
   className?: string;
   priority?: boolean;
   credit?: string;
+  creditClass?: string;
 }
 
 export default function SafeImage({
@@ -17,6 +18,7 @@ export default function SafeImage({
   className = "",
   priority = false,
   credit,
+  creditClass,
 }: SafeImageProps) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -63,7 +65,7 @@ export default function SafeImage({
         />
       </div>
       {credit && (
-        <figcaption className="mt-1 text-right text-xs text-charcoal/40 italic">
+        <figcaption className={`mt-1 text-right text-xs italic ${creditClass ?? "text-charcoal/40"}`}>
           {credit}
         </figcaption>
       )}

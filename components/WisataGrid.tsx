@@ -57,6 +57,30 @@ export default function WisataGrid({ locale, lang, jelajahi, jamBukaLabel, harga
     return () => window.removeEventListener("resize", update);
   }, []);
 
+  // Restore active card from URL hash on mount (e.g. after browser back)
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const idx = wisataData.findIndex((w) => w.slug === hash);
+    if (idx !== -1) setActiveIndex(idx);
+  }, []);
+
+  // Sync URL hash when active card changes.
+  // Deferred with setTimeout so history.replaceState runs after React's commit
+  // phase and the DevTools extension finishes walking the fiber tree —
+  // calling replaceState mid-reconciliation triggers a DevTools internal error.
+  useEffect(() => {
+    const t = setTimeout(() => {
+      if (activeIndex !== null) {
+        const slug = filtered[activeIndex]?.slug;
+        if (slug) history.replaceState(null, "", `#${slug}`);
+      } else {
+        history.replaceState(null, "", location.pathname + location.search);
+      }
+    }, 0);
+    return () => clearTimeout(t);
+  }, [activeIndex]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Scroll expand panel into view when opened
   useEffect(() => {
     if (activeIndex !== null && panelRef.current) {
@@ -95,22 +119,34 @@ export default function WisataGrid({ locale, lang, jelajahi, jamBukaLabel, harga
   return (
     <div className="flex flex-col gap-3 px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
       {/* Search bar */}
-      <div className="relative mb-2">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-charcoal/30 pointer-events-none select-none">
-          ⌕
-        </span>
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => handleSearch(e.target.value)}
-          placeholder={lang === "id" ? "Cari destinasi wisata…" : "Search destinations…"}
-          className="w-full pl-8 pr-4 py-2.5 bg-cream border border-cream-dark text-sm text-charcoal placeholder:text-charcoal/30 outline-none focus:border-terracotta/50 transition-colors"
-        />
-        {q && (
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[10px] text-charcoal/30">
-            {filtered.length} {lang === "id" ? "hasil" : "results"}
+      <div className="flex flex-col gap-1.5 mb-2">
+        <div className="relative">
+          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-charcoal/30 pointer-events-none select-none">
+            ⌕
           </span>
-        )}
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => handleSearch(e.target.value)}
+            placeholder={lang === "id" ? "Cari destinasi wisata…" : "Search destinations…"}
+            className="w-full pl-8 pr-10 py-2.5 bg-cream border border-cream-dark text-sm text-charcoal placeholder:text-charcoal/30 outline-none focus:border-terracotta/50 transition-colors"
+          />
+          {q && (
+            <button
+              onClick={() => handleSearch("")}
+              aria-label="Hapus pencarian"
+              className="absolute right-0 top-0 h-full px-3.5 flex items-center text-charcoal/40 hover:text-charcoal transition-colors"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <line x1="2" y1="2" x2="12" y2="12"/>
+                <line x1="12" y1="2" x2="2" y2="12"/>
+              </svg>
+            </button>
+          )}
+        </div>
+        <p className="font-mono text-[10px] text-charcoal/40 pl-1">
+          {filtered.length} {lang === "id" ? "hasil ditemukan" : "results found"}
+        </p>
       </div>
 
       {filtered.length === 0 && (
@@ -210,6 +246,7 @@ export default function WisataGrid({ locale, lang, jelajahi, jamBukaLabel, harga
                   src={activeItem.gambar.src}
                   alt={activeItem.nama[lang]}
                   credit={activeItem.gambar.credit}
+                  creditClass="text-cream/40"
                   className="w-full aspect-video"
                 />
 
@@ -258,28 +295,6 @@ export default function WisataGrid({ locale, lang, jelajahi, jamBukaLabel, harga
         </div>
       ))}
 
-      {/* ── Row dots ── */}
-      <div className="flex justify-center gap-2 py-5">
-        <span className="font-mono text-[10px] uppercase tracking-[0.07em] text-charcoal/30 mr-2 self-center">
-          {wisataData.length}
-        </span>
-        {rows.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => {
-              // Scroll to first card of this row
-              const firstInRow = i * cols;
-              setActiveIndex((prev) => (prev !== null && Math.floor(prev / cols) === i ? prev : null));
-              const el = document.querySelectorAll("[data-row]")[i] as HTMLElement;
-              el?.scrollIntoView({ behavior: "smooth", block: "start" });
-            }}
-            aria-label={`Baris ${i + 1}`}
-            className={`w-2 h-2 rounded-full transition-all duration-200 ${
-              activeRowIndex === i ? "bg-terracotta scale-125" : "bg-charcoal/20 hover:bg-charcoal/40"
-            }`}
-          />
-        ))}
-      </div>
 
     </div>
   );
