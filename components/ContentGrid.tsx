@@ -1,6 +1,27 @@
 "use client";
 
-import { useState, useEffect, useRef, type ReactNode } from "react";
+import { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+
+function AutoSizeTitle({ text, className }: { text: string; className: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+
+  const resize = useCallback(() => {
+    const el = ref.current;
+    if (!el) return;
+    el.style.fontSize = "";
+    const maxH = el.parentElement!.clientHeight - 20; // dikurangi padding
+    if (el.scrollHeight <= maxH) return;
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollHeight > maxH && size > 10) {
+      size -= 0.5;
+      el.style.fontSize = `${size}px`;
+    }
+  }, []);
+
+  useEffect(() => { resize(); }, [text, resize]);
+
+  return <span ref={ref} className={className}>{text}</span>;
+}
 import SafeImage from "@/components/SafeImage";
 import type { GambarEntry } from "@/types";
 
@@ -95,13 +116,12 @@ export default function ContentGrid({ items, lang, renderExtra }: Props) {
 
                   {/* Caption — fixed height */}
                   <div className={`h-22 px-3 pt-3 pb-2 sm:px-4 flex flex-col justify-start overflow-hidden ${isActive ? "bg-charcoal" : ""}`}>
-                    <span
-                      className={`block font-serif text-sm font-semibold leading-snug line-clamp-2 ${
+                    <AutoSizeTitle
+                      text={item.judul[lang]}
+                      className={`block font-serif text-sm font-semibold leading-snug ${
                         isActive ? "text-cream" : "text-charcoal group-hover:text-terracotta"
                       } transition-colors`}
-                    >
-                      {item.judul[lang]}
-                    </span>
+                    />
                   </div>
 
                   {/* Active caret */}
