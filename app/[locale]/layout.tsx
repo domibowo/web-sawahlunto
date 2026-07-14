@@ -4,6 +4,7 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatbotLoader from "@/components/ChatbotLoader";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import { getDictionary } from "@/dictionaries";
 
 const lora = Lora({
@@ -97,12 +98,19 @@ export default async function LocaleLayout({
       <head>
         <link rel="preconnect" href="https://r2.kotague.id" />
         <link rel="dns-prefetch" href="https://r2.kotague.id" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#C0622B" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Sawahlunto" />
       </head>
       <body className="min-h-full flex flex-col">
         <Navbar locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />
         <ChatbotLoader locale={locale} lang={locale as "id" | "en"} />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );
